@@ -1,0 +1,87 @@
+import React, { useEffect, useState, useContext } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import axios from "axios";
+import { StoreContext } from "../storecontext/storecontext";
+
+const ProductDetails = () => {
+  const { id } = useParams();
+  const navigate = useNavigate();
+  const [product, setProduct] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const { addToCart } = useContext(StoreContext);
+
+ useEffect(() => {
+    setLoading(true)
+    axios.get(`http://localhost:3002/menuItems/${id}`).then((res) => {
+      setProduct(res.data);
+    }).catch((err)=>{
+        console.error("Failed to fetch product:",err);
+        setProduct(null)
+    }).finally(()=>{
+        setLoading(false)
+    })
+  }, [id]);
+
+  const handleAddToCart = () => {
+    addToCart(product);
+    navigate("/cart");
+  };
+  
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex justify-center items-center text-yellow-400 text-xl font-semibold">
+        Loading product details...
+      </div>
+    );
+  }
+
+  else if (!product) {
+    return (
+      <div className="min-h-screen flex justify-center items-center text-red-500 text-xl font-semibold">
+        Product not found.
+      </div>
+    );
+  }
+else{
+  return (
+    <div className="min-h-screen flex justify-center items-center bg-gradient-to-br from-gray-900 to-gray-800 p-6">
+      <div className="bg-gray-700 rounded-lg shadow-lg max-w-4xl w-full flex flex-col md:flex-row overflow-hidden">
+        <img
+          src={product.img}
+          alt={product.title ||"Product"}
+          className="w-full md:w-1/2 h-64 md:h-auto object-cover"
+        />
+        <div className="p-6 flex flex-col justify-between md:w-1/2">
+          <div>
+            <h2 className="text-3xl font-bold text-yellow-400 mb-4">
+              {product.title}
+            </h2>
+            <p className="text-yellow-300 text-2xl font-semibold mb-4">
+              ₹{product.price}
+            </p>
+            <p className="text-gray-300 mb-6">
+              {product.desc || "No description available."}
+            </p>
+          </div>
+          <button
+            onClick={handleAddToCart}
+            className="bg-yellow-400 text-black py-3 rounded font-semibold hover:bg-yellow-300 transition"
+          >
+            Add to Cart
+          </button>
+          <br />
+          <button
+          // onClick={handleAddToOrder}
+          className="bg-yellow-400 text-black py-3 rounded font-semibold hover:bg-yellow-300 transition">
+            Order
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+};
+
+export default ProductDetails;
+

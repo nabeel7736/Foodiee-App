@@ -1,0 +1,385 @@
+{
+  "menuItems": [
+    {
+      "id": "1",
+      "img": "https://pipingpotcurry.com/wp-content/uploads/2024/04/Chicken-Biryani-Piping-Pot-Curry.jpg",
+      "title": "Authentic Chicken Biryani",
+      "price": 140,
+      "desc": "Traditional chicken biryani made with flavorful spices and long-grain basmati rice.",
+      "category": "Biriyani"
+    },
+    {
+      "id": "2",
+      "img": "https://png.pngtree.com/thumb_back/fh260/background/20240328/pngtree-mutton-biryani-meal-in-a-plate-on-table-image_15645442.jpg",
+      "title": "Mutton Biriyani",
+      "price": 240,
+      "desc": "Fragrant pulav rice mixed with tender chicken, perfect for a light meal.",
+      "category": "Biriyani"
+    },
+    {
+      "id": "3",
+      "img": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhoFARcCqxGEQAv-lxRL9_6QnaUOY-zIUAvCOzkUoKbNk6URYGexQZEUYoWsPfKOQ_Yl8hWGAkMK2WDtXlW2YjFAdbvYzLa0zA3p8k7MytP_d4YfQiB-gx1lKKMMwUMyhm3GdkAOBt2IDNi/s1600/Chicken+Biryani+4.jpg",
+      "title": "Chicken Dum Biryani",
+      "price": 200,
+      "desc": "Dum-cooked chicken biryani layered with saffron rice and rich spices.",
+      "category": "Biriyani"
+    },
+    {
+      "id": "4",
+      "img": "https://i.ytimg.com/vi/hFuG4wlztMo/maxresdefault.jpg",
+      "title": "Spicy Fried Chicken Biryani",
+      "price": 210,
+      "desc": "Crispy fried chicken paired with spicy biryani rice for a bold taste experience.",
+      "category": "Biriyani"
+    },
+    {
+      "id": "5",
+      "img": "https://www.melskitchencafe.com/wp-content/uploads/2023/01/updated-lava-cakes7-500x500.jpg",
+      "title": "Chocolate Lava Cake",
+      "category": "Dessert",
+      "price": 120,
+      "desc": "Warm chocolate cake with a gooey molten center served with ice cream."
+    },
+    {
+      "id": "6",
+      "img": "https://sundaytable.co/wp-content/uploads/2023/08/the-best-no-bake-strawberry-cheesecake-1.jpg",
+      "title": "Strawberry Cheesecake",
+      "category": "Dessert",
+      "price": 150,
+      "desc": "Creamy cheesecake topped with fresh strawberry compote."
+    },
+    {
+      "id": "7",
+      "img": "https://aartimadan.com/wp-content/uploads/2020/11/milk-powder-gulab-jamuns.jpg",
+      "title": "Gulab Jamun",
+      "category": "Dessert",
+      "price": 80,
+      "desc": "Soft deep-fried milk balls soaked in rose-flavored sugar syrup."
+    },
+    {
+      "id": "8",
+      "img": "https://threesnackateers.com/wp-content/uploads/2022/06/Brownie-Sundae-Recipe-720x720.jpg",
+      "title": "Brownie Sundae",
+      "category": "Dessert",
+      "price": 140,
+      "desc": "Fudgy brownie served with vanilla ice cream, nuts, and chocolate sauce."
+    },
+    {
+      "id": "9",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE9YuLr1ZjEeu7cfXpFYlVSp93Tz7RnCyChA&s",
+      "title": "Mango Mousse",
+      "category": "Dessert",
+      "price": 110,
+      "desc": "Light and airy mango-flavored mousse with whipped cream topping."
+    },
+    {
+      "id": "10",
+      "img": "https://vegecravings.com/wp-content/uploads/2017/03/veg-hakka-noodles-recipe-with-step-by-step-instructions.jpg",
+      "title": "Veg Hakka Noodles",
+      "category": "Noodles",
+      "price": 130,
+      "desc": "Stir-fried noodles with mixed vegetables in Indo-Chinese flavors."
+    },
+    {
+      "id": "11",
+      "img": "https://theindianclaypot.com/content/images/wp-content/uploads/2018/09/schezwan-chicken-noodles.jpg",
+      "title": "Chicken Schezwan Noodles",
+      "category": "Noodles",
+      "price": 160,
+      "desc": "Spicy noodles tossed with shredded chicken and Schezwan sauce."
+    },
+    {
+      "id": "12",
+      "img": "https://www.sharmispassions.com/wp-content/uploads/2012/01/EggNoodles3-500x500.jpg",
+      "title": "Egg Noodles",
+      "category": "Noodles",
+      "price": 140,
+      "desc": "Egg stir-fried noodles with spring onions and soy flavor."
+    },
+    {
+      "id": "13",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyaVtRDttE-YYe3YQLvHCePs512wvK3LdVjg&s",
+      "title": "Paneer Chilli Garlic Noodles",
+      "category": "Noodles",
+      "price": 150,
+      "desc": "Garlicky noodles tossed with paneer cubes and chili sauce."
+    },
+    {
+      "id": "14",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnLsIBoCf3Z4eu-mTtWVqjXgdG81FZHfOm8g&s",
+      "title": "Seafood Noodles",
+      "category": "Noodles",
+      "price": 180,
+      "desc": "Flavorful noodles mixed with prawns, squid, and vegetables."
+    },
+    {
+      "id": "15",
+      "img": "https://cdn.uengage.io/uploads/18085/image-312974-1717587897.jpeg",
+      "title": "Classic Chicken Burger",
+      "category": "Burger",
+      "price": 160,
+      "desc": "Crispy chicken patty with lettuce, mayo, and cheese in a soft bun."
+    },
+    {
+      "id": "16",
+      "img": "https://dukaan.b-cdn.net/1000x1000/webp/590610/5868aea2-f274-4eab-822f-27da13d4a499.png",
+      "title": "Veggie Delight Burger",
+      "category": "Burger",
+      "price": 130,
+      "desc": "Grilled veggie patty with cheese, tomatoes, and lettuce."
+    },
+    {
+      "id": "17",
+      "img": "https://www.kitchensanctuary.com/wp-content/uploads/2021/05/Double-Cheeseburger-tall-FS-38.webp",
+      "title": "Double Cheese Beef Burger",
+      "category": "Burger",
+      "price": 200,
+      "desc": "Juicy beef patties with double cheese and smoky barbecue sauce."
+    },
+    {
+      "id": "18",
+      "img": "https://cdn.uengage.io/uploads/18085/image-465619-1717587021.jpeg",
+      "title": "Spicy Paneer Burger",
+      "category": "Burger",
+      "price": 150,
+      "desc": "Paneer patty with chili mayo, onions, and crunchy slaw."
+    },
+    {
+      "id": "19",
+      "img": "https://theheirloompantry.co/wp-content/uploads/2022/07/fried-egg-burger-the-heirloom-pantry-2.jpg",
+      "title": "Egg and Cheese Burger",
+      "category": "Burger",
+      "price": 140,
+      "desc": "Fried egg, cheddar cheese, and tomato sauce in a toasted bun."
+    },
+    {
+      "id": "20",
+      "img": "https://www.recipetineats.com/tachyon/2018/09/Chocolate-Mousse_9.jpg?resize=500%2C500",
+      "title": "Chocolate Mousse",
+      "category": "Dessert",
+      "price": 130,
+      "desc": "Silky smooth chocolate mousse topped with whipped cream."
+    },
+    {
+      "id": "21",
+      "img": "https://classicradheysweets.in/cdn/shop/products/RASMALAI.png?v=1638878994",
+      "title": "Rasmalai",
+      "category": "Dessert",
+      "price": 90,
+      "desc": "Soft cottage cheese discs soaked in saffron milk."
+    },
+    {
+      "id": "22",
+      "img": "https://images.getrecipekit.com/20221203000052-how-to-make-singapore-noodles-recipe.png?aspect_ratio=1:1&quality=90&",
+      "title": "Singapore Noodles",
+      "category": "Noodles",
+      "price": 170,
+      "desc": "Thin rice noodles with curry flavor, shrimp, and bell peppers."
+    },
+    {
+      "id": "23",
+      "img": "https://thescranline.com/wp-content/uploads/2022/02/crispy-chicken-burger-WEB-01.jpg",
+      "title": "Cheesy Chicken Pop Burger",
+      "category": "Burger",
+      "price": 170,
+      "desc": "Mini chicken pops inside a burger with cheesy sauce and jalapeños."
+    },
+    {
+      "id": "24",
+      "img": "https://www.allrecipes.com/thmb/T_c_krRIbsX-SoCW7Mll7QTut80=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/AllRecipes_Veggie_Burger_0001-2000-1b394fe9d3aa4ceb98281dfc09b8146a.jpg",
+      "title": "Grilled Mushroom Burger",
+      "category": "Burger",
+      "price": 155,
+      "desc": "Grilled mushrooms, cheese, and garlic aioli in a whole wheat bun."
+    },
+    {
+      "id": "25",
+      "img": "https://www.anediblemosaic.com/wp-content/uploads//2021/09/mango-lassi-featured-image.jpg",
+      "title": "Mango Lassi",
+      "category": "Drinks",
+      "price": 90,
+      "desc": "Creamy yogurt-based mango smoothie flavored with cardamom."
+    },
+    {
+      "id": "26",
+      "img": "https://lemoninginger.com/wp-content/uploads/2018/04/1804_Beverage_IcedCoffee-004.jpg",
+      "title": "Cold Coffee Frappe",
+      "category": "Drinks",
+      "price": 110,
+      "desc": "Iced coffee blended with milk and topped with chocolate drizzle."
+    },
+    {
+      "id": "27",
+      "img": "https://images.squarespace-cdn.com/content/v1/5bcccf8b9b7d15579477a125/90b3a927-bad4-4c64-bd2f-2f62ea5424a2/Virgin+Mojito.jpg",
+      "title": "Virgin Mojito",
+      "category": "Drinks",
+      "price": 100,
+      "desc": "Refreshing mocktail with mint, lemon, soda, and crushed ice."
+    },
+    {
+      "id": "28",
+      "img": "https://foodsharingvegan.com/wp-content/uploads/2022/06/Watermelon-Lime-Juice-Plant-Based-on-a-Budget-1-2.jpg",
+      "title": "Watermelon Juice",
+      "category": "Drinks",
+      "price": 80,
+      "desc": "Freshly blended watermelon juice served chilled."
+    },
+    {
+      "id": "29",
+      "img": "https://simplyhomecooked.com/wp-content/uploads/2023/04/Margherita-Pizza-3.jpg",
+      "title": "Margherita Pizza",
+      "category": "Pizza",
+      "price": 180,
+      "desc": "Classic tomato, mozzarella, and basil on a crispy thin crust."
+    },
+    {
+      "id": "30",
+      "img": "https://myfancypantry.com/wp-content/uploads/2012/04/chicken-tikka-pizza-04406.jpg",
+      "title": "Spicy Chicken Tikka Masala Pizza",
+      "category": "Pizza",
+      "price": 220,
+      "desc": "Tandoori chicken chunks, onions, and bell peppers on cheesy crust."
+    },
+    {
+      "id": "31",
+      "img": "https://www.cookclickndevour.com/wp-content/uploads/2019/09/paneer-pizza-recipe-500x500.jpg",
+      "title": "Paneer Delight Pizza",
+      "category": "Pizza",
+      "price": 200,
+      "desc": "Cubes of paneer, onions, and capsicum with spicy Indian seasoning."
+    },
+    {
+      "id": "32",
+      "img": "https://reddotgreendot.com/cdn/shop/products/ChickenPepperoni.png?v=1678783253",
+      "title": "Pepperoni Feast Pizza",
+      "category": "Pizza",
+      "price": 240,
+      "desc": "Loaded with spicy pepperoni slices and extra cheese."
+    }
+  ],
+  "userDetails": [
+    {
+      "id": "1",
+      "email": "test@example.com",
+      "password": "123456",
+      "name": "Test User"
+    },
+    {
+      "id": "fc9f",
+      "name": "nabeel",
+      "email": "sanukuttan@gmail.com",
+      "password": "12332145",
+      "role": "user"
+    },
+    {
+      "id": "ba62",
+      "name": "ajsal",
+      "email": "ajsal12@gmail.com",
+      "password": "ajsal@34",
+      "role": "user"
+    },
+    {
+      "id": "3436",
+      "name": "Adhil",
+      "email": "adhil@gmail.com",
+      "password": "123adil",
+      "role": "user"
+    }
+  ],
+  "carts": [
+    {
+      "id": "062e",
+      "userId": "fc9f",
+      "menuId": "3",
+      "title": "Chicken Dum Biryani",
+      "price": 200,
+      "img": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhoFARcCqxGEQAv-lxRL9_6QnaUOY-zIUAvCOzkUoKbNk6URYGexQZEUYoWsPfKOQ_Yl8hWGAkMK2WDtXlW2YjFAdbvYzLa0zA3p8k7MytP_d4YfQiB-gx1lKKMMwUMyhm3GdkAOBt2IDNi/s1600/Chicken+Biryani+4.jpg",
+      "quantity": 1
+    },
+    {
+      "id": "78a6",
+      "userId": "fc9f",
+      "menuId": "2",
+      "title": "Mutton Biriyani",
+      "price": 240,
+      "img": "https://png.pngtree.com/thumb_back/fh260/background/20240328/pngtree-mutton-biryani-meal-in-a-plate-on-table-image_15645442.jpg",
+      "quantity": 2
+    },
+    {
+      "id": "7d16",
+      "userId": "fc9f",
+      "menuId": "062e",
+      "title": "Chicken Dum Biryani",
+      "price": 200,
+      "img": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhoFARcCqxGEQAv-lxRL9_6QnaUOY-zIUAvCOzkUoKbNk6URYGexQZEUYoWsPfKOQ_Yl8hWGAkMK2WDtXlW2YjFAdbvYzLa0zA3p8k7MytP_d4YfQiB-gx1lKKMMwUMyhm3GdkAOBt2IDNi/s1600/Chicken+Biryani+4.jpg",
+      "quantity": 1
+    },
+    {
+      "id": "51d7",
+      "userId": "fc9f",
+      "menuId": "1",
+      "title": "Authentic Chicken Biryani",
+      "price": 140,
+      "img": "https://pipingpotcurry.com/wp-content/uploads/2024/04/Chicken-Biryani-Piping-Pot-Curry.jpg",
+      "quantity": 1
+    },
+    {
+      "id": "8264",
+      "userId": "fc9f",
+      "menuId": "5",
+      "title": "Chocolate Lava Cake",
+      "price": 120,
+      "img": "https://www.melskitchencafe.com/wp-content/uploads/2023/01/updated-lava-cakes7-500x500.jpg",
+      "quantity": 1
+    }
+  ],
+  "orders": [
+    {
+      "id": "1",
+      "userId": 1,
+      "items": [
+        {
+          "menuId": 1,
+          "title": "Authentic Chicken Biryani",
+          "price": 140,
+          "quantity": 2
+        },
+        {
+          "menuId": 5,
+          "title": "Chocolate Lava Cake",
+          "price": 120,
+          "quantity": 1
+        }
+      ],
+      "totalAmount": 400,
+      "status": "confirmed",
+      "orderTime": "2025-07-26T10:00:00"
+    },
+    {
+      "id": "1753680520410",
+      "userId": "fc9f",
+      "items": [
+        {
+          "id": "c9b5",
+          "userId": "fc9f",
+          "menuId": "1",
+          "title": "Authentic Chicken Biryani",
+          "price": 140,
+          "img": "https://pipingpotcurry.com/wp-content/uploads/2024/04/Chicken-Biryani-Piping-Pot-Curry.jpg",
+          "quantity": 1
+        },
+        {
+          "id": "d76a",
+          "userId": "fc9f",
+          "menuId": "c9b5",
+          "title": "Authentic Chicken Biryani",
+          "price": 140,
+          "img": "https://pipingpotcurry.com/wp-content/uploads/2024/04/Chicken-Biryani-Piping-Pot-Curry.jpg",
+          "quantity": 4
+        }
+      ],
+      "total": 700,
+      "date": "7/28/2025, 10:58:40 AM"
+    }
+  ]
+}
