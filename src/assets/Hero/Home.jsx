@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom';
 import Service from '../services/service';
 import About from '../About/About';
 import Contact from '../Contact/Contact';
-import Footer from '../pages/footer';
 
 
 const Home = () => {

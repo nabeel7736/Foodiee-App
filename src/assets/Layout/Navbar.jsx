@@ -1,12 +1,14 @@
 
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import Logo from "./foodiee.jpeg";
 import { StoreContext } from "../storecontext/storecontext";
-import { RiAccountCircle2Fill } from "react-icons/ri";
+import { RiAccountPinCircleFill } from "react-icons/ri";
+import { HiMenu, HiX } from "react-icons/hi";
 
 const Navbar = () => {
   const { user, logout } = useContext(StoreContext);
+  const [menuOpen,setMenuOpen]= useState(false);
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -32,7 +34,7 @@ const Navbar = () => {
           <span className="text-yellow-500">foodish.</span>
         </Link>
 
-        <ul className="flex gap-6 items-center text-gray-800 dark:text-white font-medium ">
+        <ul className="hidden md:flex gap-6 items-center text-gray-800 dark:text-white font-medium ">
           <li className="hover:text-yellow-500">
             <Link
               to="/"
@@ -73,18 +75,25 @@ const Navbar = () => {
               Contact
             </Link>
           </li>
+          <li className="hover:text-yellow-500">
+            <Link
+              to="/wishlist"
+              className={isActive("/wishlist") ? "text-yellow-500 font-semibold" : ""}
+            >
+              Favourites
+            </Link>
+          </li>
           {user && (
             <li className="text-yellow-400">Hi, {user.name}</li>
           )}
         </ul>
 
-        <div>
+        <div className="hidden md:flex">
           {user ? (
             <button
               onClick={handleLogout}
-              className="bg-gradient-to-r from-yellow-500 to-yellow-300 text-black font-medium px-6 py-2 rounded-full hover:scale-105 transition-transform duration-200 shadow-lg"
               >
-            <RiAccountCircle2Fill size={25} />
+            <RiAccountPinCircleFill size={35}  className="text-yellow-500 cursor-pointer"/>
             </button>
           ) : (
             <Link to="/login">
@@ -94,7 +103,43 @@ const Navbar = () => {
             </Link>
           )}
         </div>
+
+        <div className="md:hidden" >
+          <button onClick={()=>setMenuOpen(!menuOpen)}>
+            {menuOpen ? (
+              <HiX className="text-yellow-500 text-3xl"/>
+            ):(
+              <HiMenu className="text-yellow-500 text-3xl"/>
+            )}
+
+          </button>
+        </div>
       </div>
+
+      {menuOpen && (
+        <div className="md:hidden px-5 pt-4 pb-6  shadow-md dark:text-white font-medium text-right">
+          <ul>
+          {user && <li className="text-yellow-400">Hi, {user.name}</li>}
+          <li><Link to="/" onClick={() => setMenuOpen(false)} className={isActive("/") ? "text-yellow-500 font-semibold " : ""}>Home</Link></li>
+          <li><Link to="/menu" onClick={() => setMenuOpen(false)} className={isActive("/menu") ? "text-yellow-500 font-semibold" : ""}>Menu</Link></li>
+          <li><Link to="/cart" onClick={() => setMenuOpen(false)} className={isActive("/cart") ? "text-yellow-500 font-semibold" : ""}>Cart</Link></li>
+          <li><Link to="/about" onClick={() => setMenuOpen(false)} className={isActive("/about") ? "text-yellow-500 font-semibold" : ""}>About</Link></li>
+          <li><Link to="/contact" onClick={() => setMenuOpen(false)} className={isActive("/contact") ? "text-yellow-500 font-semibold" : ""}>Contact</Link></li>
+          <li><Link to="/wishlist" onClick={() => setMenuOpen(false)} className={isActive("/wishlist") ? "text-yellow-500 font-semibold" : ""}>Favourites</Link></li>
+          {user ? (
+            <button onClick={() => { setMenuOpen(false); handleLogout(); }} className="text-red-500 font-bold">
+              Logout
+            </button>
+          ) : (
+            <Link to="/login" onClick={() => setMenuOpen(false)}>
+              <button className="bg-gradient-to-r from-yellow-500 to-yellow-300 text-black px-6 py-2 rounded-full hover:scale-105 transition">
+                Login
+              </button>
+            </Link>
+          )}
+          </ul>
+        </div>
+      )}
     </header>
   );
 };

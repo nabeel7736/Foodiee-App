@@ -1,7 +1,9 @@
 
 
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { StoreContext } from "../storecontext/storecontext";
+import { FaHeartCirclePlus, FaHeart } from "react-icons/fa6";
 
 const Menu = () => {
   const [menuItems, setMenuItems] = useState([]);
@@ -11,6 +13,7 @@ const Menu = () => {
   const [sort, setSort] = useState("");
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
+  const {user,wishlist, removeFromWishlist,addToWishlist} =useContext(StoreContext);
 
 
   useEffect(() => {
@@ -59,6 +62,10 @@ const Menu = () => {
 
   const categories = ["All", "Biriyani", "Burger", "Dessert" , "Drinks", "Pizza"];
 
+  const isInWishList =(itemId)=>{
+    return wishlist?.some((item)=>item.id ===itemId)
+  };
+  
   if (loading) {
     return (
       <div className="min-h-screen flex justify-center items-center text-yellow-400 text-2xl font-semibold">
@@ -66,6 +73,8 @@ const Menu = () => {
       </div>
     );
   }
+
+
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 text-white py-20 px-6 sm:px-10">
@@ -126,13 +135,14 @@ const Menu = () => {
             
             <div
               key={item.id}
-              className="bg-gray-700 p-4 rounded shadow hover:shadow-lg cursor-pointer transition"
-              onClick={() =>  navigate(`/products/${item.id}`)}
+              className="bg-gray-700 p-4 rounded shadow hover:shadow-lg transition"
+              // onClick={() =>  navigate(`/products/${item.id}`)}
             >
+              
               <img
                 src={item.img}
                 alt={item.title || "Food item"}
-                className="w-full h-40 object-cover rounded mb-2"
+                className="w-full h-40 object-cover rounded mb-2 hover:scale-105 transition duration-200"
               />
               <h3 className="text-xl font-semibold">{item.title}</h3>
               <p className="text-yellow-400 font-bold">₹{item.price}</p>
@@ -143,10 +153,28 @@ const Menu = () => {
                   e.stopPropagation();
                    navigate(`/products/${item.id}`);
                 }}
-                className="mt-2 bg-yellow-400 text-black py-1 px-3 rounded hover:bg-yellow-300 transition"
+                className="mt-2 bg-yellow-400 text-black py-1 px-3 rounded hover:bg-yellow-300 cursor-pointer transition"
               >
                 View Details
               </button>
+              {user &&(
+              <button
+  onClick={(e) => {
+    e.stopPropagation();
+    wishlist.find((i) => i.id === item.id)
+      ? removeFromWishlist(item.id)
+      : addToWishlist(item);
+  }}
+  className={`mt-2 ml-45 py-2 px-3 rounded cursor-pointer transition ${
+    wishlist.find((i) => i.id === item.id)
+      ? 'bg-transparent text-red-400 hover:text-gray-600 hover:scale-50'
+      : 'bg-transparent hover:scale-120 hover:text-green-300'
+  }`}
+>
+  {wishlist.find((i) => i.id === item.id) ? <FaHeart size={30}/> : <FaHeartCirclePlus size={30}/>}
+</button>
+)}
+              
             </div>
             
           ))

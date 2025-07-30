@@ -13,7 +13,7 @@ const StoreProvider = ({ children }) => {
 
   const [orders, setOrders] = useState([]);
 
-  const API = "http://localhost:3002"; 
+  const API = "http://localhost:3002";
 
 
 const [cartItems, setCartItems] = useState(() => {
@@ -150,15 +150,20 @@ useEffect(() => {
   localStorage.setItem("wishlist", JSON.stringify(wishlist));
 }, [wishlist]);
 
-  const addToWishlist =(item)=>{
-if(!wishlist.some((i)=> i.id ===item.id)){
-  setWishlist([...wishlist,item]);
-}
+ const addToWishlist = (item) => {
+  const exists = wishlist.find((i) => i.id === item.id);
+  if (!exists) {
+    const updated = [...wishlist, item];
+    setWishlist(updated);
+    localStorage.setItem("wishlist", JSON.stringify(updated));
   }
+};
 
-  const removeWishlist =(id)=>{
-  setWishlist(wishlist.filter((item)=>item.id !== id));
-  }
+ const removeFromWishlist = (itemId) => {
+  const updated = wishlist.filter((item) => item.id !== itemId);
+  setWishlist(updated);
+  localStorage.setItem("wishlist", JSON.stringify(updated));
+};
 
   return (
     <StoreContext.Provider
@@ -177,8 +182,8 @@ if(!wishlist.some((i)=> i.id ===item.id)){
         registerUser,
         setCartItems,
         addToWishlist,
-        removeWishlist,
-        // wishlist,
+        removeFromWishlist,
+        wishlist,
       }}
     >
       {children}

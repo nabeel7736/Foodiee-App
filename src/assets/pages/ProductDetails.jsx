@@ -8,7 +8,7 @@ const ProductDetails = () => {
   const navigate = useNavigate();
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
-  const { addToCart } = useContext(StoreContext);
+  const { addToCart,cartItems } = useContext(StoreContext);
 
  useEffect(() => {
     setLoading(true)
@@ -26,6 +26,8 @@ const ProductDetails = () => {
     addToCart(product);
     navigate("/cart");
   };
+
+    const isInCart = product && cartItems.some((item) => item.id === product.id);
   
 
   if (loading) {
@@ -36,14 +38,15 @@ const ProductDetails = () => {
     );
   }
 
-  else if (!product) {
+  if (!product) {
     return (
       <div className="min-h-screen flex justify-center items-center text-red-500 text-xl font-semibold">
         Product not found.
       </div>
     );
   }
-else{
+
+
   return (
     <div className="min-h-screen flex justify-center items-center bg-gradient-to-br from-gray-900 to-gray-800 p-6">
       <div className="bg-gray-700 rounded-lg shadow-lg max-w-4xl w-full flex flex-col md:flex-row overflow-hidden">
@@ -64,23 +67,33 @@ else{
               {product.desc || "No description available."}
             </p>
           </div>
+
+          {isInCart ? (
           <button
+          onClick={()=>navigate("/cart")}
+          className="bg-yellow-400 text-black py-3 rounded font-semibold hover:bg-yellow-300 transition">
+            Go to Cart
+          </button>
+          ) : (
+           <button
             onClick={handleAddToCart}
             className="bg-yellow-400 text-black py-3 rounded font-semibold hover:bg-yellow-300 transition"
           >
             Add to Cart
           </button>
+          )}
           <br />
+
           <button
-          // onClick={handleAddToOrder}
+          onClick={()=> navigate("/order")}
           className="bg-yellow-400 text-black py-3 rounded font-semibold hover:bg-yellow-300 transition">
-            Order
+            Order Now
           </button>
         </div>
       </div>
     </div>
   );
-}
+
 };
 
 export default ProductDetails;

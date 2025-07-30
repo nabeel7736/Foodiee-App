@@ -13,6 +13,7 @@ import Register from "./assets/pages/register";
 import About from "./assets/About/About";
 import Contact from "./assets/Contact/Contact";
 import Footer from "./assets/pages/footer";
+import Wishlist from "./assets/pages/wishlist";
 
 
 
@@ -32,6 +33,7 @@ const App = () => {
         <Route path="/register" element={<Register />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/wishlist" element={<Wishlist />} />
         
       </Routes>
         <Footer/>

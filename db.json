@@ -284,6 +284,13 @@
       "email": "adhil@gmail.com",
       "password": "123adil",
       "role": "user"
+    },
+    {
+      "id": "1e43",
+      "name": "Basith",
+      "email": "basith@gmail.com",
+      "password": "123basith",
+      "role": "user"
     }
   ],
   "carts": [
