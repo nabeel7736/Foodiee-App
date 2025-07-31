@@ -2,6 +2,7 @@
 import React, { useContext, useEffect } from "react";
 import { StoreContext } from "../storecontext/storecontext";
 import { useNavigate } from "react-router-dom";
+import { FaCartShopping } from "react-icons/fa6";
 
 const Cart = () => {
     const { user, cartItems, addToCart, updateQuantity, removeFromCart, clearCart } =
@@ -31,12 +32,7 @@ const Cart = () => {
     };
 
     const handleCheckout = () => {
-        if (cartItems.length > 0) {
-            navigate("/thankyou");
-        } else {
-            alert("Cart is empty!");
-        }
-        clearCart();
+        navigate('/order')
     };
 
     return (
@@ -46,7 +42,12 @@ const Cart = () => {
             </h1>
 
             {cartItems.length === 0 ? (
-                <p className="text-center text-gray-400 text-lg">Your cart is empty.</p>
+                <div className="bg-transparent relative top-40">
+                <FaCartShopping size={80} className="text-center text-yellow-500 ml-142"/>
+                <br />
+                <p className="text-center text-yellow-400 font-semibold text-3xl items-center">Your cart is empty.</p>
+                <p className="text-center text-gray-400 font-mono text-xl items-center">Please Add To Cart</p>
+                 </div>
             ) : (
                 <div className="flex flex-col gap-4 max-w-4xl mx-auto">
                     {cartItems.map((item) => (

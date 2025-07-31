@@ -9,6 +9,8 @@ const StoreProvider = ({ children }) => {
     const saved = localStorage.getItem("user");
     return saved ? JSON.parse(saved) : null;
   });
+  const [wishlist,setWishlist] =useState([])
+  const [userLoaded, setUserLoaded] = useState(false);
 
 
   const [orders, setOrders] = useState([]);
@@ -39,6 +41,7 @@ const [cartItems, setCartItems] = useState(() => {
      
     }
   }, [cartItems, user?.id]);
+
 
   useEffect(() => {
     const fetchOrders = async () => {
@@ -129,40 +132,49 @@ const [cartItems, setCartItems] = useState(() => {
 
   const placeOrder = async (order) => {
     try {
-      await axios.post(`${BASE_URL}/orders`, order);
+      await axios.post(`${API}/orders`, order);
       setOrders((prev) => [...prev, order]);
     } catch (err) {
       console.error("Failed to place order:", err);
     }
   };
 
-  const [wishlist, setWishlist] = useState(() => {
-  try {
-    const saved = localStorage.getItem("wishlist");
-    return saved ? JSON.parse(saved) : [];
-  } catch (error) {
-    console.error("Error parsing wishlist from localStorage:", error);
-    return [];
-  }
-});
+  useEffect(() => {
+    const savedUser = localStorage.getItem("user");
+    if (savedUser) {
+      setUser(JSON.parse(savedUser));
+    }
+    setUserLoaded(true);
+  }, []);
 
-useEffect(() => {
-  localStorage.setItem("wishlist", JSON.stringify(wishlist));
-}, [wishlist]);
+  useEffect(() => {
+    if (user && userLoaded) {
+      const storedWishlist = localStorage.getItem(`wishlist_${user.email}`);
+      setWishlist(storedWishlist ? JSON.parse(storedWishlist) : []);
+    } else if (userLoaded) {
+      setWishlist([]);
+    }
+  }, [user, userLoaded]);
+
+
+  useEffect(() => {
+    if (user && userLoaded) {
+      localStorage.setItem(`wishlist_${user.email}`, JSON.stringify(wishlist));
+    }
+  }, [wishlist, user, userLoaded]);
 
  const addToWishlist = (item) => {
-  const exists = wishlist.find((i) => i.id === item.id);
-  if (!exists) {
-    const updated = [...wishlist, item];
-    setWishlist(updated);
-    localStorage.setItem("wishlist", JSON.stringify(updated));
+  setWishlist((prevwishist)=>{
+   
+    if(!prevwishist.some((i)=>i.id===item.id)) {
+return [...prevwishist, item]
+    }
+    return prevwishist
+  })
   }
-};
 
- const removeFromWishlist = (itemId) => {
-  const updated = wishlist.filter((item) => item.id !== itemId);
-  setWishlist(updated);
-  localStorage.setItem("wishlist", JSON.stringify(updated));
+ const removeFromWishlist = (id) => {
+  setWishlist((prev) => prev.filter((item) => item.id !== id));
 };
 
   return (

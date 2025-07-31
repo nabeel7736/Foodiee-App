@@ -15,10 +15,14 @@ const Order = () => {
 
   if (!user) return null;
 
-  const total = cartItems.reduce(
+  const subtotal = cartItems.reduce(
     (acc, item) => acc + item.price * item.quantity,
     0
   );
+
+  const tax =Math.round(subtotal * 0.05)
+  const deliverycharge =40
+  const grandTotal =subtotal + tax + deliverycharge 
 
   const handlePlaceOrder = () => {
     if (cartItems.length === 0) {
@@ -31,14 +35,17 @@ const Order = () => {
       id: new Date().getTime(),
       userId: user.id,
       items: cartItems,
-      total,
+      subtotal,
+      tax,
+      deliverycharge,
+      total : grandTotal,
       date: new Date().toLocaleString(),
       status: "Order Placed",
     };
 
     placeOrder(orderDetails); 
-    clearCart();
-    navigate("/thankyou"); 
+    // clearCart();
+    navigate("/payment", {replace: true}); 
   };
 
   return (
@@ -67,10 +74,28 @@ const Order = () => {
           </div>
         ))}
 
-        <div className="mt-6 flex justify-between text-xl font-bold border-t border-gray-600 pt-4">
+        <div className="mt-6 text-lg space-y-2">
+          <div className="flex justify-between">
+            <span>Subtotal :</span>
+            <span className="text-yellow-300">₹{subtotal}</span>
+          </div>
+          <div className="flex justify-between">
+        <span>Tax (5%) :</span>
+        <span className="text-yellow-300">₹{tax}</span>
+          </div>
+          <div className="flex justify-between">
+         <span>Deliver Charge :</span>
+         <span className="text-yellow-300">₹{deliverycharge}</span>
+          </div>
+          <div className="flex justify-between border-t border-gray-600 pt-4 mt-6 text-2xl font-extrabold">
+        <span>Total :</span>
+        <span className="text-yellow-300">₹{grandTotal}</span>
+          </div>
+        </div>
+        {/* <div className="mt-6 flex justify-between text-xl font-bold border-t border-gray-600 pt-4">
           <span>Total:</span>
           <span className="text-yellow-400">₹{total}</span>
-        </div>
+        </div> */}
 
         <button
           onClick={handlePlaceOrder}

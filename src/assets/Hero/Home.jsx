@@ -24,8 +24,11 @@ const Home = () => {
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-yellow-400 leading-tight">
                 Welcome to <span className="text-white">foodish.</span> Restaurant
               </h1>
+              <h3 className='text-yellow-400'>Your Favorite Food, Delivered Fast!</h3>
               <p className="text-base text-gray-200">
-                Discover the taste of authentic biriyani with a modern twist. Prepared fresh & delivered fast.
+                Craving something delicious? Explore a wide range of mouthwatering meals from your favorite restaurants. Fast delivery, fresh ingredients, and flavors you’ll love — all in one place.
+<br />
+Order now and satisfy your hunger with just a few clicks!
               </p>
               <button
                 onClick={handleOrderbtn}

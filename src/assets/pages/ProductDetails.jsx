@@ -82,13 +82,13 @@ const ProductDetails = () => {
             Add to Cart
           </button>
           )}
-          <br />
+          {/* <br /> */}
 
-          <button
+          {/* <button
           onClick={()=> navigate("/order")}
           className="bg-yellow-400 text-black py-3 rounded font-semibold hover:bg-yellow-300 transition">
             Order Now
-          </button>
+          </button> */}
         </div>
       </div>
     </div>
