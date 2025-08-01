@@ -1,14 +1,25 @@
 import React, { useEffect, useState, useContext } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, useLocation } from "react-router-dom";
 import axios from "axios";
-import { StoreContext } from "../storecontext/storecontext";
+import { StoreContext } from "../storecontext/storecontext";  
 
 const ProductDetails = () => {
   const { id } = useParams();
   const navigate = useNavigate();
+  // const location =useLocation()
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const { addToCart,cartItems } = useContext(StoreContext);
+
+  // const singleProduct= location.state?.product;
+
+  // useEffect(()=>{
+  //   if(singleProduct){
+  //     setProduct([singleProduct])
+  //   }else{
+  //     setProduct(cartItems)
+  //   }
+  // },[cartItems, singleProduct])
 
  useEffect(() => {
     setLoading(true)
@@ -26,6 +37,12 @@ const ProductDetails = () => {
     addToCart(product);
     navigate("/cart");
   };
+
+  // const handleOrderNow = () => {
+  //   navigate("/order", { state: { product } });
+  // };
+
+//  const itemsOrder =singleProduct ? [singleProduct] : cartItems
 
     const isInCart = product && cartItems.some((item) => item.id === product.id);
   
@@ -82,13 +99,13 @@ const ProductDetails = () => {
             Add to Cart
           </button>
           )}
-          {/* <br /> */}
+          <br />
 
-          {/* <button
-          onClick={()=> navigate("/order")}
+          <button
+          onClick={()=>navigate('/order',{state:{singleProduct: product}})}
           className="bg-yellow-400 text-black py-3 rounded font-semibold hover:bg-yellow-300 transition">
             Order Now
-          </button> */}
+          </button>
         </div>
       </div>
     </div>

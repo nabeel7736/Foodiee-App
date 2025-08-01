@@ -86,7 +86,17 @@ const Navbar = () => {
           {user && (
             <li className="text-yellow-400">Hi, {user.name}</li>
           )}
-        </ul>
+        {user &&(
+          <li className="hover:text-yellow-500">
+            <Link
+              to="/myorders"
+              className={isActive("/myorders") ? "text-yellow-500 font-semibold" : ""}
+              >
+              My Orders
+            </Link>
+          </li>
+        )}
+        </ul> 
 
         <div className="hidden md:flex">
           {user ? (

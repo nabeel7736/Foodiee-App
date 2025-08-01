@@ -12,11 +12,17 @@ const Payment = () => {
     if (!user || cartItems.length === 0) {
       navigate("/order");
     }
+
+    const saveaddress =localStorage.getItem('deliveryAddress')
+    if(saveaddress){
+      setAddress(saveaddress)
+    }
   }, [user, cartItems, navigate]);
 
   if (!user || cartItems.length === 0) return null;
 
   const grandTotal = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0) * 1.05 + 40;
+
 
   const handlePayment = () => {
      
@@ -24,6 +30,16 @@ const Payment = () => {
       alert("Please enter your delivery address.");
       return;
     }
+    if(address.length< 15){
+      alert("Address must be atleast 15 Characters.")
+      return
+    }
+    if(address.length > 160){
+      alert("Address must be no more than 160 characters.")
+      return
+    }
+
+    localStorage.setItem('deliveryAddress',address)
 
     const orderDetails = {
       id: new Date().getTime(),

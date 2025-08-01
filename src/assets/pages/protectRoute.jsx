@@ -2,7 +2,7 @@ import React, {useContext} from "react";
 import { Navigate } from "react-router-dom";
 import { StoreContext } from "../storecontext/storecontext";
 
-const protectedRoute =({children})=>{
+const ProtectedRoute =({children})=>{
     const {user} =useContext(StoreContext)
     
     if(!user){
@@ -10,4 +10,4 @@ const protectedRoute =({children})=>{
     }
     return children;
 }
-export default protectedRoute
+export default ProtectedRoute

@@ -81,7 +81,7 @@ const Menu = () => {
       <h2 className="text-4xl font-bold text-yellow-400 text-center mb-8">
         Explore Our Menu
       </h2>
-      <p className="text-1xl text-center mb-8">
+      <p className="text-1xl text-center mb-8 font-medium">
         explore our tasty dishes near you.
       </p>
 

@@ -14,7 +14,7 @@ const Register = () => {
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
-  const handleChange = (e) => {
+  const handleChange = (e) => { 
     setUserData({ ...userData, [e.target.name]: e.target.value });
   };
 

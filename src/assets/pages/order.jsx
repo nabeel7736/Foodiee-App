@@ -1,21 +1,31 @@
 
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { StoreContext } from "../storecontext/storecontext";
-import { useNavigate } from "react-router-dom";
+import { useNavigate,useLocation } from "react-router-dom";
 
 const Order = () => {
   const { user, cartItems, placeOrder, clearCart } = useContext(StoreContext);
+  const [orderItems,setOrderitems] =useState([])
   const navigate = useNavigate();
+   const location = useLocation();
+
+   const singleProduct =location.state?.singleProduct
 
   useEffect(() => {
     if (!user) {
       navigate("/login");
     }
-  }, [user, navigate]);
+
+    if(singleProduct){
+      setOrderitems([{...singleProduct, quantity:1}])
+    }else{
+      setOrderitems(cartItems)
+    }
+  }, [user, navigate, cartItems, singleProduct]);
 
   if (!user) return null;
 
-  const subtotal = cartItems.reduce(
+  const subtotal = orderItems.reduce(
     (acc, item) => acc + item.price * item.quantity,
     0
   );
@@ -25,7 +35,7 @@ const Order = () => {
   const grandTotal =subtotal + tax + deliverycharge 
 
   const handlePlaceOrder = () => {
-    if (cartItems.length === 0) {
+    if (orderItems.length === 0) {
       alert("Your cart is empty!");
       navigate("/menu");
       return;
@@ -45,7 +55,7 @@ const Order = () => {
 
     placeOrder(orderDetails); 
     // clearCart();
-    navigate("/payment", {replace: true}); 
+    navigate("/payment", {state:{orderDetails}, replace: true}); 
   };
 
   return (
@@ -57,7 +67,7 @@ const Order = () => {
       <div className="max-w-3xl mx-auto bg-gray-800 p-6 rounded shadow">
         <h2 className="text-2xl font-semibold mb-4">Order Summary</h2>
 
-        {cartItems.map((item) => (
+        {orderItems.map((item) => (
           <div
             key={item.id}
             className="flex justify-between items-center py-2 border-b border-gray-600"

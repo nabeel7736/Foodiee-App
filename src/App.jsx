@@ -16,7 +16,8 @@ import Footer from "./assets/pages/footer";
 import Wishlist from "./assets/pages/wishlist";
 import Order from "./assets/pages/order";
 import Payment from "./assets/pages/Payment";
-import protectedRoute from "./assets/pages/protectRoute";
+import ProtectedRoute from "./assets/pages/protectRoute";
+import Myorder from "./assets/pages/myOrder";
 
 
 
@@ -33,9 +34,9 @@ const App = () => {
 
         <Route path="/cart"
          element={
-          <protectedRoute>
+          <ProtectedRoute>
             <Cart/>
-          </protectedRoute>
+          </ProtectedRoute>
          } />
         <Route path="/thankyou" element={<ThankYou />} />
         <Route path="/login" element={<Login />} />
@@ -44,21 +45,27 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/wishlist" 
         element={
-          <protectedRoute>
+          <ProtectedRoute>
             <Wishlist/>
-          </protectedRoute>
+          </ProtectedRoute>
         } />
         <Route path="/order" 
         element={
-          <protectedRoute>
+          <ProtectedRoute>
             <Order/>
-          </protectedRoute>
+          </ProtectedRoute>
         } />
         <Route path="/payment"
          element={
-          <protectedRoute>
+          <ProtectedRoute>
             <Payment/>
-          </protectedRoute>
+          </ProtectedRoute>
+         } />
+        <Route path="/myorders"
+         element={
+          <ProtectedRoute>
+            <Myorder/>
+          </ProtectedRoute>
          } />
         
       </Routes>

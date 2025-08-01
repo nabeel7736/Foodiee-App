@@ -37,9 +37,6 @@ const Cart = () => {
 
     return (
         <div className="p-6 min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 text-white">
-            <h1 className="text-4xl font-bold mb-6 text-center text-yellow-400">
-                Your Cart
-            </h1>
 
             {cartItems.length === 0 ? (
                 <div className="bg-transparent relative top-40">
@@ -50,6 +47,10 @@ const Cart = () => {
                  </div>
             ) : (
                 <div className="flex flex-col gap-4 max-w-4xl mx-auto">
+            <h1 className="text-4xl font-bold mb-2 text-center text-yellow-400 mt-15">
+                Your Cart
+            </h1>
+                    <p className="text-center mb-4 font-medium">Check your selected items, update quantities, and proceed to checkout when you're ready to eat!</p>
                     {cartItems.map((item) => (
                         <div
                             key={item.id}
