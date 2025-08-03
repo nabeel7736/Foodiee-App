@@ -1,117 +1,152 @@
 
 import React, { useContext, useEffect, useState } from "react";
 import { StoreContext } from "../storecontext/storecontext";
-import { useNavigate,useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const Order = () => {
-  const { user, cartItems, placeOrder, clearCart } = useContext(StoreContext);
-  const [orderItems,setOrderitems] =useState([])
+  const { user, cartItems, setCartItems } = useContext(StoreContext);
+  const location = useLocation();
   const navigate = useNavigate();
-   const location = useLocation();
 
-   const singleProduct =location.state?.singleProduct
+  const [address, setAddress] = useState(() => localStorage.getItem("address") || "");
+  const [paymentMethod, setPaymentMethod] = useState("UPI");
+  const [singleProduct, setSingleProduct] = useState(null);
+  const [isPlacing, setIsPlacing] = useState(false);
 
   useEffect(() => {
     if (!user) {
       navigate("/login");
+      return;
     }
+    if (location.state && location.state.singleProduct) {
+      const productFromLocation = location.state.singleProduct;
 
-    if(singleProduct){
-      setOrderitems([{...singleProduct, quantity:1}])
-    }else{
-      setOrderitems(cartItems)
+      const withQuantity ={
+        ...productFromLocation,
+        quantity: productFromLocation.quantity || 1,
+      }
+      setSingleProduct(withQuantity)
     }
-  }, [user, navigate, cartItems, singleProduct]);
+  }, [location, user, navigate]);
 
-  if (!user) return null;
 
-  const subtotal = orderItems.reduce(
+  const items = singleProduct ? [singleProduct] : cartItems;
+ const subtotal = items .reduce(
     (acc, item) => acc + item.price * item.quantity,
     0
   );
 
   const tax =Math.round(subtotal * 0.05)
-  const deliverycharge =40
-  const grandTotal =subtotal + tax + deliverycharge 
+  const deliverycharge =30
+  const total =subtotal + tax + deliverycharge 
 
-  const handlePlaceOrder = () => {
-    if (orderItems.length === 0) {
-      alert("Your cart is empty!");
-      navigate("/menu");
+  const placeOrder = async () => {
+    if (!address.trim()) {
+      alert("Please enter your address");
       return;
     }
 
-    const orderDetails = {
-      id: new Date().getTime(),
+    const orderData = {
       userId: user.id,
-      items: cartItems,
+      items: items,
+      total,
+      address,
       subtotal,
       tax,
       deliverycharge,
-      total : grandTotal,
-      date: new Date().toLocaleString(),
+      paymentMethod,
       status: "Order Placed",
+      date: new Date().toLocaleString(),
     };
 
-    placeOrder(orderDetails); 
-    // clearCart();
-    navigate("/payment", {state:{orderDetails}, replace: true}); 
+    try {
+      setIsPlacing(true);
+      await axios.post("http://localhost:3002/orders", orderData);
+
+      if (!singleProduct) {
+        // Clear cart after placing order from cart
+        setCartItems([]);
+        localStorage.removeItem("cart");
+      }
+
+      localStorage.removeItem("address");
+
+      navigate("/thankyou", {state:{orderData}, replace: true});
+    } catch (err) {
+      console.error("Order placement failed:", err)
+      alert("Failed to place order")
+    } finally {
+      setIsPlacing(false);
+    }
   };
 
   return (
-    <div className="min-h-screen p-6 bg-gradient-to-r from-gray-900 to-black text-white">
-      <h1 className="text-4xl font-bold text-center mb-8 text-yellow-400">
-        Checkout
-      </h1>
+    <div className="min-h-screen bg-gray-900 text-white p-6">
+      <h1 className="text-3xl font-bold text-center mb-6 text-yellow-400">Place Your Order</h1>
 
-      <div className="max-w-3xl mx-auto bg-gray-800 p-6 rounded shadow">
-        <h2 className="text-2xl font-semibold mb-4">Order Summary</h2>
+      <div className="max-w-3xl mx-auto bg-gray-800 p-6 rounded-lg shadow-lg">
+        <div className="mb-4">
+          <label className="block font-semibold mb-2">Delivery Address:</label>
+          <textarea
+            value={address}
+            onChange={(e) => {
+              setAddress(e.target.value);
+              localStorage.setItem("address", e.target.value);
+            }}
+            className="w-full p-2 rounded bg-gray-700 text-white"
+            rows={3}
+          />
+        </div>
 
-        {orderItems.map((item) => (
-          <div
-            key={item.id}
-            className="flex justify-between items-center py-2 border-b border-gray-600"
+        <div className="mb-4">
+          <label className="block font-semibold mb-2">Payment Method:</label>
+          <select
+            value={paymentMethod}
+            onChange={(e) => setPaymentMethod(e.target.value)}
+            className="w-full p-2 rounded bg-gray-700 text-white"
           >
-            <div>
-              <h3 className="text-lg font-semibold">{item.title}</h3>
-              <p className="text-sm text-gray-400">
-                Quantity: {item.quantity}
-              </p>
-            </div>
-            <p className="text-yellow-400 font-semibold">
-              ₹{item.price * item.quantity}
-            </p>
-          </div>
-        ))}
+            <option value="UPI">UPI</option>
+            <option value="COD">Cash On Delivery</option>
+            <option value="ATM">ATM Card</option>
+          </select>
+        </div>
 
-        <div className="mt-6 text-lg space-y-2">
+        <h2 className="text-xl font-bold mb-4">Order Summary</h2>
+        <ul className="space-y-2 mb-4">
+          {items.map((item, index) => (
+            <li key={index} className="flex justify-between">
+              <span>{item.title} x {item.quantity}</span>
+              <span>₹{(item.price * item.quantity).toFixed(2)}</span>
+            </li>
+          ))}
+        </ul>
+
+        <div className="border-t border-gray-600 pt-4 space-y-1 text-sm">
           <div className="flex justify-between">
-            <span>Subtotal :</span>
-            <span className="text-yellow-300">₹{subtotal}</span>
+            <span>Subtotal:</span>
+            <span>₹{subtotal.toFixed(2)}</span>
           </div>
           <div className="flex justify-between">
-        <span>Tax (5%) :</span>
-        <span className="text-yellow-300">₹{tax}</span>
+            <span>Tax (5%):</span>
+            <span>₹{tax.toFixed(2)}</span>
           </div>
           <div className="flex justify-between">
-         <span>Deliver Charge :</span>
-         <span className="text-yellow-300">₹{deliverycharge}</span>
+            <span>Delivery:</span>
+            <span>₹{deliverycharge.toFixed(2)}</span>
           </div>
-          <div className="flex justify-between border-t border-gray-600 pt-4 mt-6 text-2xl font-extrabold">
-        <span>Total :</span>
-        <span className="text-yellow-300">₹{grandTotal}</span>
+          <div className="flex justify-between font-bold text-yellow-400 text-lg">
+            <span>Total:</span>
+            <span>₹{total.toFixed(2)}</span>
           </div>
         </div>
-        {/* <div className="mt-6 flex justify-between text-xl font-bold border-t border-gray-600 pt-4">
-          <span>Total:</span>
-          <span className="text-yellow-400">₹{total}</span>
-        </div> */}
 
         <button
-          onClick={handlePlaceOrder}
-          className="mt-8 bg-yellow-400 hover:bg-yellow-300 text-black font-bold py-3 px-6 rounded w-full"
+          onClick={placeOrder}
+          disabled={isPlacing}
+          className="mt-6 w-full bg-yellow-500 hover:bg-yellow-400 text-black font-bold py-2 px-4 rounded"
         >
-          Place Order
+          {isPlacing ? "Placing Order..." : "Place Order"}
         </button>
       </div>
     </div>
@@ -119,4 +154,3 @@ const Order = () => {
 };
 
 export default Order;
-

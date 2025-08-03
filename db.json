@@ -291,6 +291,20 @@
       "email": "basith@gmail.com",
       "password": "123basith",
       "role": "user"
+    },
+    {
+      "id": "5a2e",
+      "name": "naja",
+      "email": "naja123@gmail.com",
+      "password": "naja900",
+      "role": "user"
+    },
+    {
+      "id": "a3bc",
+      "name": "Fidha",
+      "email": "fidhafinu@gmail.com",
+      "password": "sanufinu345",
+      "role": "user"
     }
   ],
   "carts": [
@@ -342,53 +356,6 @@
   ],
   "orders": [
     {
-      "id": "1",
-      "userId": 1,
-      "items": [
-        {
-          "menuId": 1,
-          "title": "Authentic Chicken Biryani",
-          "price": 140,
-          "quantity": 2
-        },
-        {
-          "menuId": 5,
-          "title": "Chocolate Lava Cake",
-          "price": 120,
-          "quantity": 1
-        }
-      ],
-      "totalAmount": 400,
-      "status": "confirmed",
-      "orderTime": "2025-07-26T10:00:00"
-    },
-    {
-      "id": "1753680520410",
-      "userId": "fc9f",
-      "items": [
-        {
-          "id": "c9b5",
-          "userId": "fc9f",
-          "menuId": "1",
-          "title": "Authentic Chicken Biryani",
-          "price": 140,
-          "img": "https://pipingpotcurry.com/wp-content/uploads/2024/04/Chicken-Biryani-Piping-Pot-Curry.jpg",
-          "quantity": 1
-        },
-        {
-          "id": "d76a",
-          "userId": "fc9f",
-          "menuId": "c9b5",
-          "title": "Authentic Chicken Biryani",
-          "price": 140,
-          "img": "https://pipingpotcurry.com/wp-content/uploads/2024/04/Chicken-Biryani-Piping-Pot-Curry.jpg",
-          "quantity": 4
-        }
-      ],
-      "total": 700,
-      "date": "7/28/2025, 10:58:40 AM"
-    },
-    {
       "id": "1753982173557",
       "userId": "3436",
       "items": [
@@ -406,366 +373,56 @@
       "tax": 12,
       "deliverycharge": 40,
       "total": 292,
+      "address": "malappuram , manjeri, pulpatta, thottekkad",
+      "paymentMethod": "UPI",
       "date": "7/31/2025, 10:46:13 PM",
       "status": "Order Placed"
     },
     {
-      "id": "1753982199567",
-      "userId": "3436",
-      "items": [
-        {
-          "id": "2",
-          "img": "https://png.pngtree.com/thumb_back/fh260/background/20240328/pngtree-mutton-biryani-meal-in-a-plate-on-table-image_15645442.jpg",
-          "title": "Mutton Biriyani",
-          "price": 240,
-          "desc": "Fragrant pulav rice mixed with tender chicken, perfect for a light meal.",
-          "category": "Biriyani",
-          "quantity": 1
-        }
-      ],
+      "id": 1754128022746,
+      "userId": "fc9f",
+      "items": [],
+      "subtotal": 180,
+      "tax": 9,
+      "deliverycharge": 40,
+      "total": 229,
+      "date": "8/2/2025, 3:17:02 PM",
+      "status": "Order Placed"
+    },
+    {
+      "id": 1754128271438,
+      "userId": "fc9f",
+      "items": [],
       "subtotal": 240,
       "tax": 12,
       "deliverycharge": 40,
       "total": 292,
-      "date": "7/31/2025, 10:46:39 PM",
+      "date": "8/2/2025, 3:21:11 PM",
       "status": "Order Placed"
     },
     {
-      "id": "1753982452318",
-      "userId": "3436",
-      "items": [
-        {
-          "id": "2",
-          "img": "https://png.pngtree.com/thumb_back/fh260/background/20240328/pngtree-mutton-biryani-meal-in-a-plate-on-table-image_15645442.jpg",
-          "title": "Mutton Biriyani",
-          "price": 240,
-          "desc": "Fragrant pulav rice mixed with tender chicken, perfect for a light meal.",
-          "category": "Biriyani",
-          "quantity": 1
-        }
-      ],
-      "total": 292,
-      "paymentMethod": "UPI",
-      "address": "puruthanankodan house, pulpatta, Thottekkad",
-      "date": "7/31/2025, 10:50:52 PM",
-      "status": "Order Placed - UPI"
-    },
-    {
-      "id": "1753982489619",
-      "userId": "3436",
-      "items": [
-        {
-          "id": "2",
-          "img": "https://png.pngtree.com/thumb_back/fh260/background/20240328/pngtree-mutton-biryani-meal-in-a-plate-on-table-image_15645442.jpg",
-          "title": "Mutton Biriyani",
-          "price": 240,
-          "desc": "Fragrant pulav rice mixed with tender chicken, perfect for a light meal.",
-          "category": "Biriyani",
-          "quantity": 1
-        }
-      ],
-      "total": 292,
-      "paymentMethod": "UPI",
-      "address": "rbfrhbf4u4o",
-      "date": "7/31/2025, 10:51:29 PM",
-      "status": "Order Placed - UPI"
-    },
-    {
-      "id": "1753982577069",
-      "userId": "3436",
-      "items": [
-        {
-          "id": "2",
-          "img": "https://png.pngtree.com/thumb_back/fh260/background/20240328/pngtree-mutton-biryani-meal-in-a-plate-on-table-image_15645442.jpg",
-          "title": "Mutton Biriyani",
-          "price": 240,
-          "desc": "Fragrant pulav rice mixed with tender chicken, perfect for a light meal.",
-          "category": "Biriyani",
-          "quantity": 1
-        }
-      ],
-      "total": 292,
-      "paymentMethod": "UPI",
-      "address": "fbjrf3i4fi34jop4r",
-      "date": "7/31/2025, 10:52:57 PM",
-      "status": "Order Placed - UPI"
-    },
-    {
-      "id": "1753982841635",
-      "userId": "3436",
-      "items": [
-        {
-          "id": "2",
-          "img": "https://png.pngtree.com/thumb_back/fh260/background/20240328/pngtree-mutton-biryani-meal-in-a-plate-on-table-image_15645442.jpg",
-          "title": "Mutton Biriyani",
-          "price": 240,
-          "desc": "Fragrant pulav rice mixed with tender chicken, perfect for a light meal.",
-          "category": "Biriyani",
-          "quantity": 1
-        }
-      ],
-      "total": 292,
-      "paymentMethod": "UPI",
-      "address": "jfnjfnvfj",
-      "date": "7/31/2025, 10:57:21 PM",
-      "status": "Order Placed - UPI"
-    },
-    {
-      "id": "1753984235538",
+      "id": 1754128291876,
       "userId": "fc9f",
       "items": [
         {
-          "id": "5",
-          "img": "https://www.melskitchencafe.com/wp-content/uploads/2023/01/updated-lava-cakes7-500x500.jpg",
-          "title": "Chocolate Lava Cake",
-          "category": "Dessert",
-          "price": 120,
-          "desc": "Warm chocolate cake with a gooey molten center served with ice cream.",
-          "quantity": 3
-        }
-      ],
-      "total": 418,
-      "paymentMethod": "UPI",
-      "address": "puruthanankodan House Pulpatta ,Thottekkad",
-      "date": "7/31/2025, 11:20:35 PM",
-      "status": "Order Cancelled"
-    },
-    {
-      "id": "1753984260375",
-      "userId": "fc9f",
-      "items": [
-        {
-          "id": "5",
-          "img": "https://www.melskitchencafe.com/wp-content/uploads/2023/01/updated-lava-cakes7-500x500.jpg",
-          "title": "Chocolate Lava Cake",
-          "category": "Dessert",
-          "price": 120,
-          "desc": "Warm chocolate cake with a gooey molten center served with ice cream.",
-          "quantity": 3
-        },
-        {
           "id": "2",
           "img": "https://png.pngtree.com/thumb_back/fh260/background/20240328/pngtree-mutton-biryani-meal-in-a-plate-on-table-image_15645442.jpg",
           "title": "Mutton Biriyani",
           "price": 240,
           "desc": "Fragrant pulav rice mixed with tender chicken, perfect for a light meal.",
           "category": "Biriyani",
-          "quantity": 1
+          "quantity": 2
         }
       ],
-      "total": 670,
-      "paymentMethod": "UPI",
-      "address": "rjnenroew",
-      "date": "7/31/2025, 11:21:00 PM",
-      "status": "Order Cancelled"
-    },
-    {
-      "id": "1753984704496",
-      "userId": "fc9f",
-      "items": [
-        {
-          "id": "5",
-          "img": "https://www.melskitchencafe.com/wp-content/uploads/2023/01/updated-lava-cakes7-500x500.jpg",
-          "title": "Chocolate Lava Cake",
-          "category": "Dessert",
-          "price": 120,
-          "desc": "Warm chocolate cake with a gooey molten center served with ice cream.",
-          "quantity": 3
-        },
-        {
-          "id": "2",
-          "img": "https://png.pngtree.com/thumb_back/fh260/background/20240328/pngtree-mutton-biryani-meal-in-a-plate-on-table-image_15645442.jpg",
-          "title": "Mutton Biriyani",
-          "price": 240,
-          "desc": "Fragrant pulav rice mixed with tender chicken, perfect for a light meal.",
-          "category": "Biriyani",
-          "quantity": 1
-        }
-      ],
-      "total": 670,
-      "paymentMethod": "UPI",
-      "address": "ejnfjernfwnf",
-      "date": "7/31/2025, 11:28:24 PM",
-      "status": "Order Placed - UPI"
-    },
-    {
-      "id": "1753984722457",
-      "userId": "fc9f",
-      "items": [
-        {
-          "id": "5",
-          "img": "https://www.melskitchencafe.com/wp-content/uploads/2023/01/updated-lava-cakes7-500x500.jpg",
-          "title": "Chocolate Lava Cake",
-          "category": "Dessert",
-          "price": 120,
-          "desc": "Warm chocolate cake with a gooey molten center served with ice cream.",
-          "quantity": 3
-        },
-        {
-          "id": "2",
-          "img": "https://png.pngtree.com/thumb_back/fh260/background/20240328/pngtree-mutton-biryani-meal-in-a-plate-on-table-image_15645442.jpg",
-          "title": "Mutton Biriyani",
-          "price": 240,
-          "desc": "Fragrant pulav rice mixed with tender chicken, perfect for a light meal.",
-          "category": "Biriyani",
-          "quantity": 1
-        }
-      ],
-      "total": 670,
-      "paymentMethod": "UPI",
-      "address": "enfjenfewf\n",
-      "date": "7/31/2025, 11:28:42 PM",
-      "status": "Order Placed - UPI"
-    },
-    {
-      "id": "1753984756112",
-      "userId": "fc9f",
-      "items": [
-        {
-          "id": "5",
-          "img": "https://www.melskitchencafe.com/wp-content/uploads/2023/01/updated-lava-cakes7-500x500.jpg",
-          "title": "Chocolate Lava Cake",
-          "category": "Dessert",
-          "price": 120,
-          "desc": "Warm chocolate cake with a gooey molten center served with ice cream.",
-          "quantity": 3
-        },
-        {
-          "id": "2",
-          "img": "https://png.pngtree.com/thumb_back/fh260/background/20240328/pngtree-mutton-biryani-meal-in-a-plate-on-table-image_15645442.jpg",
-          "title": "Mutton Biriyani",
-          "price": 240,
-          "desc": "Fragrant pulav rice mixed with tender chicken, perfect for a light meal.",
-          "category": "Biriyani",
-          "quantity": 1
-        }
-      ],
-      "total": 670,
-      "paymentMethod": "UPI",
-      "address": "v er relrf",
-      "date": "7/31/2025, 11:29:16 PM",
-      "status": "Order Placed - UPI"
-    },
-    {
-      "id": "1753984841187",
-      "userId": "fc9f",
-      "items": [
-        {
-          "id": "5",
-          "img": "https://www.melskitchencafe.com/wp-content/uploads/2023/01/updated-lava-cakes7-500x500.jpg",
-          "title": "Chocolate Lava Cake",
-          "category": "Dessert",
-          "price": 120,
-          "desc": "Warm chocolate cake with a gooey molten center served with ice cream.",
-          "quantity": 3
-        },
-        {
-          "id": "2",
-          "img": "https://png.pngtree.com/thumb_back/fh260/background/20240328/pngtree-mutton-biryani-meal-in-a-plate-on-table-image_15645442.jpg",
-          "title": "Mutton Biriyani",
-          "price": 240,
-          "desc": "Fragrant pulav rice mixed with tender chicken, perfect for a light meal.",
-          "category": "Biriyani",
-          "quantity": 1
-        }
-      ],
-      "subtotal": 600,
-      "tax": 30,
+      "subtotal": 480,
+      "tax": 24,
       "deliverycharge": 40,
-      "total": 670,
-      "date": "7/31/2025, 11:30:41 PM",
-      "status": "Order Cancelled"
-    },
-    {
-      "id": "1753984845127",
-      "userId": "fc9f",
-      "items": [
-        {
-          "id": "5",
-          "img": "https://www.melskitchencafe.com/wp-content/uploads/2023/01/updated-lava-cakes7-500x500.jpg",
-          "title": "Chocolate Lava Cake",
-          "category": "Dessert",
-          "price": 120,
-          "desc": "Warm chocolate cake with a gooey molten center served with ice cream.",
-          "quantity": 3
-        },
-        {
-          "id": "2",
-          "img": "https://png.pngtree.com/thumb_back/fh260/background/20240328/pngtree-mutton-biryani-meal-in-a-plate-on-table-image_15645442.jpg",
-          "title": "Mutton Biriyani",
-          "price": 240,
-          "desc": "Fragrant pulav rice mixed with tender chicken, perfect for a light meal.",
-          "category": "Biriyani",
-          "quantity": 1
-        }
-      ],
-      "total": 670,
-      "paymentMethod": "UPI",
-      "address": "c kjce c",
-      "date": "7/31/2025, 11:30:45 PM",
-      "status": "Order Placed - UPI"
-    },
-    {
-      "id": "1753984876874",
-      "userId": "fc9f",
-      "items": [
-        {
-          "id": "5",
-          "img": "https://www.melskitchencafe.com/wp-content/uploads/2023/01/updated-lava-cakes7-500x500.jpg",
-          "title": "Chocolate Lava Cake",
-          "category": "Dessert",
-          "price": 120,
-          "desc": "Warm chocolate cake with a gooey molten center served with ice cream.",
-          "quantity": 3
-        },
-        {
-          "id": "2",
-          "img": "https://png.pngtree.com/thumb_back/fh260/background/20240328/pngtree-mutton-biryani-meal-in-a-plate-on-table-image_15645442.jpg",
-          "title": "Mutton Biriyani",
-          "price": 240,
-          "desc": "Fragrant pulav rice mixed with tender chicken, perfect for a light meal.",
-          "category": "Biriyani",
-          "quantity": 1
-        }
-      ],
-      "subtotal": 600,
-      "tax": 30,
-      "deliverycharge": 40,
-      "total": 670,
-      "date": "7/31/2025, 11:31:16 PM",
+      "total": 544,
+      "date": "8/2/2025, 3:21:31 PM",
       "status": "Order Placed"
     },
     {
-      "id": "1753984883010",
-      "userId": "fc9f",
-      "items": [
-        {
-          "id": "5",
-          "img": "https://www.melskitchencafe.com/wp-content/uploads/2023/01/updated-lava-cakes7-500x500.jpg",
-          "title": "Chocolate Lava Cake",
-          "category": "Dessert",
-          "price": 120,
-          "desc": "Warm chocolate cake with a gooey molten center served with ice cream.",
-          "quantity": 3
-        },
-        {
-          "id": "2",
-          "img": "https://png.pngtree.com/thumb_back/fh260/background/20240328/pngtree-mutton-biryani-meal-in-a-plate-on-table-image_15645442.jpg",
-          "title": "Mutton Biriyani",
-          "price": 240,
-          "desc": "Fragrant pulav rice mixed with tender chicken, perfect for a light meal.",
-          "category": "Biriyani",
-          "quantity": 1
-        }
-      ],
-      "total": 670,
-      "paymentMethod": "UPI",
-      "address": "rk rkgkre",
-      "date": "7/31/2025, 11:31:23 PM",
-      "status": "Order Placed - UPI"
-    },
-    {
-      "id": "1753984960387",
+      "id": 1754128841652,
       "userId": "fc9f",
       "items": [
         {
@@ -775,295 +432,18 @@
           "price": 240,
           "desc": "Fragrant pulav rice mixed with tender chicken, perfect for a light meal.",
           "category": "Biriyani",
-          "quantity": 1
-        }
-      ],
-      "subtotal": 240,
-      "tax": 12,
-      "deliverycharge": 40,
-      "total": 292,
-      "date": "7/31/2025, 11:32:40 PM",
-      "status": "Order Placed"
-    },
-    {
-      "id": "1753984964750",
-      "userId": "fc9f",
-      "items": [
-        {
-          "id": "2",
-          "img": "https://png.pngtree.com/thumb_back/fh260/background/20240328/pngtree-mutton-biryani-meal-in-a-plate-on-table-image_15645442.jpg",
-          "title": "Mutton Biriyani",
-          "price": 240,
-          "desc": "Fragrant pulav rice mixed with tender chicken, perfect for a light meal.",
-          "category": "Biriyani",
-          "quantity": 1
-        }
-      ],
-      "total": 292,
-      "paymentMethod": "UPI",
-      "address": " clke vler",
-      "date": "7/31/2025, 11:32:44 PM",
-      "status": "Order Placed - UPI"
-    },
-    {
-      "id": 1754020756892,
-      "userId": "fc9f",
-      "items": [
-        {
-          "id": "2",
-          "img": "https://png.pngtree.com/thumb_back/fh260/background/20240328/pngtree-mutton-biryani-meal-in-a-plate-on-table-image_15645442.jpg",
-          "title": "Mutton Biriyani",
-          "price": 240,
-          "desc": "Fragrant pulav rice mixed with tender chicken, perfect for a light meal.",
-          "category": "Biriyani",
-          "quantity": 1
-        }
-      ],
-      "subtotal": 240,
-      "tax": 12,
-      "deliverycharge": 40,
-      "total": 292,
-      "date": "8/1/2025, 9:29:16 AM",
-      "status": "Order Placed"
-    },
-    {
-      "id": 1754020769890,
-      "userId": "fc9f",
-      "items": [
-        {
-          "id": "2",
-          "img": "https://png.pngtree.com/thumb_back/fh260/background/20240328/pngtree-mutton-biryani-meal-in-a-plate-on-table-image_15645442.jpg",
-          "title": "Mutton Biriyani",
-          "price": 240,
-          "desc": "Fragrant pulav rice mixed with tender chicken, perfect for a light meal.",
-          "category": "Biriyani",
-          "quantity": 1
-        }
-      ],
-      "total": 292,
-      "paymentMethod": "UPI",
-      "address": "rhgbi4g34uhtu34ut",
-      "date": "8/1/2025, 9:29:29 AM",
-      "status": "Order Placed - UPI"
-    },
-    {
-      "id": 1754029567634,
-      "userId": "fc9f",
-      "items": [
-        {
-          "id": "2",
-          "img": "https://png.pngtree.com/thumb_back/fh260/background/20240328/pngtree-mutton-biryani-meal-in-a-plate-on-table-image_15645442.jpg",
-          "title": "Mutton Biriyani",
-          "price": 240,
-          "desc": "Fragrant pulav rice mixed with tender chicken, perfect for a light meal.",
-          "category": "Biriyani",
-          "quantity": 1
-        },
-        {
-          "id": "5",
-          "img": "https://www.melskitchencafe.com/wp-content/uploads/2023/01/updated-lava-cakes7-500x500.jpg",
-          "title": "Chocolate Lava Cake",
-          "category": "Dessert",
-          "price": 120,
-          "desc": "Warm chocolate cake with a gooey molten center served with ice cream.",
-          "quantity": 1
-        }
-      ],
-      "subtotal": 100,
-      "tax": 5,
-      "deliverycharge": 40,
-      "total": 145,
-      "date": "8/1/2025, 11:56:07 AM",
-      "status": "Order Placed"
-    },
-    {
-      "id": 1754029576381,
-      "userId": "fc9f",
-      "items": [
-        {
-          "id": "2",
-          "img": "https://png.pngtree.com/thumb_back/fh260/background/20240328/pngtree-mutton-biryani-meal-in-a-plate-on-table-image_15645442.jpg",
-          "title": "Mutton Biriyani",
-          "price": 240,
-          "desc": "Fragrant pulav rice mixed with tender chicken, perfect for a light meal.",
-          "category": "Biriyani",
-          "quantity": 1
-        },
-        {
-          "id": "5",
-          "img": "https://www.melskitchencafe.com/wp-content/uploads/2023/01/updated-lava-cakes7-500x500.jpg",
-          "title": "Chocolate Lava Cake",
-          "category": "Dessert",
-          "price": 120,
-          "desc": "Warm chocolate cake with a gooey molten center served with ice cream.",
-          "quantity": 1
-        }
-      ],
-      "total": 418,
-      "paymentMethod": "UPI",
-      "address": "rfirbfrbrgierre",
-      "date": "8/1/2025, 11:56:16 AM",
-      "status": "Order Placed - UPI"
-    },
-    {
-      "id": 1754030794615,
-      "userId": "fc9f",
-      "items": [
-        {
-          "id": "2",
-          "img": "https://png.pngtree.com/thumb_back/fh260/background/20240328/pngtree-mutton-biryani-meal-in-a-plate-on-table-image_15645442.jpg",
-          "title": "Mutton Biriyani",
-          "price": 240,
-          "desc": "Fragrant pulav rice mixed with tender chicken, perfect for a light meal.",
-          "category": "Biriyani",
-          "quantity": 1
-        },
-        {
-          "id": "5",
-          "img": "https://www.melskitchencafe.com/wp-content/uploads/2023/01/updated-lava-cakes7-500x500.jpg",
-          "title": "Chocolate Lava Cake",
-          "category": "Dessert",
-          "price": 120,
-          "desc": "Warm chocolate cake with a gooey molten center served with ice cream.",
-          "quantity": 1
-        }
-      ],
-      "subtotal": 240,
-      "tax": 12,
-      "deliverycharge": 40,
-      "total": 292,
-      "date": "8/1/2025, 12:16:34 PM",
-      "status": "Order Placed"
-    },
-    {
-      "id": 1754030857093,
-      "userId": "fc9f",
-      "items": [
-        {
-          "id": "2",
-          "img": "https://png.pngtree.com/thumb_back/fh260/background/20240328/pngtree-mutton-biryani-meal-in-a-plate-on-table-image_15645442.jpg",
-          "title": "Mutton Biriyani",
-          "price": 240,
-          "desc": "Fragrant pulav rice mixed with tender chicken, perfect for a light meal.",
-          "category": "Biriyani",
-          "quantity": 1
-        },
-        {
-          "id": "5",
-          "img": "https://www.melskitchencafe.com/wp-content/uploads/2023/01/updated-lava-cakes7-500x500.jpg",
-          "title": "Chocolate Lava Cake",
-          "category": "Dessert",
-          "price": 120,
-          "desc": "Warm chocolate cake with a gooey molten center served with ice cream.",
-          "quantity": 1
-        }
-      ],
-      "total": 418,
-      "paymentMethod": "UPI",
-      "address": "puruthanankodidvhbvhvbevbevbevbueb                                                                     ",
-      "date": "8/1/2025, 12:17:37 PM",
-      "status": "Order Placed - UPI"
-    },
-    {
-      "id": 1754031187438,
-      "userId": "fc9f",
-      "items": [
-        {
-          "id": "2",
-          "img": "https://png.pngtree.com/thumb_back/fh260/background/20240328/pngtree-mutton-biryani-meal-in-a-plate-on-table-image_15645442.jpg",
-          "title": "Mutton Biriyani",
-          "price": 240,
-          "desc": "Fragrant pulav rice mixed with tender chicken, perfect for a light meal.",
-          "category": "Biriyani",
-          "quantity": 1
-        },
-        {
-          "id": "5",
-          "img": "https://www.melskitchencafe.com/wp-content/uploads/2023/01/updated-lava-cakes7-500x500.jpg",
-          "title": "Chocolate Lava Cake",
-          "category": "Dessert",
-          "price": 120,
-          "desc": "Warm chocolate cake with a gooey molten center served with ice cream.",
-          "quantity": 1
-        }
-      ],
-      "subtotal": 240,
-      "tax": 12,
-      "deliverycharge": 40,
-      "total": 292,
-      "date": "8/1/2025, 12:23:07 PM",
-      "status": "Order Placed"
-    },
-    {
-      "id": 1754031205797,
-      "userId": "fc9f",
-      "items": [
-        {
-          "id": "2",
-          "img": "https://png.pngtree.com/thumb_back/fh260/background/20240328/pngtree-mutton-biryani-meal-in-a-plate-on-table-image_15645442.jpg",
-          "title": "Mutton Biriyani",
-          "price": 240,
-          "desc": "Fragrant pulav rice mixed with tender chicken, perfect for a light meal.",
-          "category": "Biriyani",
-          "quantity": 1
-        },
-        {
-          "id": "5",
-          "img": "https://www.melskitchencafe.com/wp-content/uploads/2023/01/updated-lava-cakes7-500x500.jpg",
-          "title": "Chocolate Lava Cake",
-          "category": "Dessert",
-          "price": 120,
-          "desc": "Warm chocolate cake with a gooey molten center served with ice cream.",
-          "quantity": 1
-        }
-      ],
-      "total": 418,
-      "paymentMethod": "UPI",
-      "address": "malappuram , manjeri, pulpatta, thottekkad",
-      "date": "8/1/2025, 12:23:25 PM",
-      "status": "Order Placed - UPI"
-    },
-    {
-      "id": 1754031214506,
-      "userId": "fc9f",
-      "items": [
-        {
-          "id": "2",
-          "img": "https://png.pngtree.com/thumb_back/fh260/background/20240328/pngtree-mutton-biryani-meal-in-a-plate-on-table-image_15645442.jpg",
-          "title": "Mutton Biriyani",
-          "price": 240,
-          "desc": "Fragrant pulav rice mixed with tender chicken, perfect for a light meal.",
-          "category": "Biriyani",
-          "quantity": 1
-        },
-        {
-          "id": "5",
-          "img": "https://www.melskitchencafe.com/wp-content/uploads/2023/01/updated-lava-cakes7-500x500.jpg",
-          "title": "Chocolate Lava Cake",
-          "category": "Dessert",
-          "price": 120,
-          "desc": "Warm chocolate cake with a gooey molten center served with ice cream.",
-          "quantity": 1
-        },
-        {
-          "id": "3",
-          "img": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhoFARcCqxGEQAv-lxRL9_6QnaUOY-zIUAvCOzkUoKbNk6URYGexQZEUYoWsPfKOQ_Yl8hWGAkMK2WDtXlW2YjFAdbvYzLa0zA3p8k7MytP_d4YfQiB-gx1lKKMMwUMyhm3GdkAOBt2IDNi/s1600/Chicken+Biryani+4.jpg",
-          "title": "Chicken Dum Biryani",
-          "price": 200,
-          "desc": "Dum-cooked chicken biryani layered with saffron rice and rich spices.",
-          "category": "Biriyani",
-          "quantity": 1
+          "quantity": 2
         }
       ],
       "subtotal": 200,
       "tax": 10,
       "deliverycharge": 40,
       "total": 250,
-      "date": "8/1/2025, 12:23:34 PM",
+      "date": "8/2/2025, 3:30:41 PM",
       "status": "Order Placed"
     },
     {
-      "id": 1754031463721,
+      "id": 1754128877809,
       "userId": "fc9f",
       "items": [
         {
@@ -1073,36 +453,18 @@
           "price": 240,
           "desc": "Fragrant pulav rice mixed with tender chicken, perfect for a light meal.",
           "category": "Biriyani",
-          "quantity": 1
-        },
-        {
-          "id": "5",
-          "img": "https://www.melskitchencafe.com/wp-content/uploads/2023/01/updated-lava-cakes7-500x500.jpg",
-          "title": "Chocolate Lava Cake",
-          "category": "Dessert",
-          "price": 120,
-          "desc": "Warm chocolate cake with a gooey molten center served with ice cream.",
-          "quantity": 1
-        },
-        {
-          "id": "3",
-          "img": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhoFARcCqxGEQAv-lxRL9_6QnaUOY-zIUAvCOzkUoKbNk6URYGexQZEUYoWsPfKOQ_Yl8hWGAkMK2WDtXlW2YjFAdbvYzLa0zA3p8k7MytP_d4YfQiB-gx1lKKMMwUMyhm3GdkAOBt2IDNi/s1600/Chicken+Biryani+4.jpg",
-          "title": "Chicken Dum Biryani",
-          "price": 200,
-          "desc": "Dum-cooked chicken biryani layered with saffron rice and rich spices.",
-          "category": "Biriyani",
-          "quantity": 1
+          "quantity": 2
         }
       ],
-      "subtotal": 560,
-      "tax": 28,
+      "subtotal": 150,
+      "tax": 8,
       "deliverycharge": 40,
-      "total": 628,
-      "date": "8/1/2025, 12:27:43 PM",
+      "total": 198,
+      "date": "8/2/2025, 3:31:17 PM",
       "status": "Order Placed"
     },
     {
-      "id": 1754031477380,
+      "id": 1754128911865,
       "userId": "fc9f",
       "items": [
         {
@@ -1112,208 +474,187 @@
           "price": 240,
           "desc": "Fragrant pulav rice mixed with tender chicken, perfect for a light meal.",
           "category": "Biriyani",
-          "quantity": 1
-        },
-        {
-          "id": "5",
-          "img": "https://www.melskitchencafe.com/wp-content/uploads/2023/01/updated-lava-cakes7-500x500.jpg",
-          "title": "Chocolate Lava Cake",
-          "category": "Dessert",
-          "price": 120,
-          "desc": "Warm chocolate cake with a gooey molten center served with ice cream.",
-          "quantity": 1
-        },
-        {
-          "id": "3",
-          "img": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhoFARcCqxGEQAv-lxRL9_6QnaUOY-zIUAvCOzkUoKbNk6URYGexQZEUYoWsPfKOQ_Yl8hWGAkMK2WDtXlW2YjFAdbvYzLa0zA3p8k7MytP_d4YfQiB-gx1lKKMMwUMyhm3GdkAOBt2IDNi/s1600/Chicken+Biryani+4.jpg",
-          "title": "Chicken Dum Biryani",
-          "price": 200,
-          "desc": "Dum-cooked chicken biryani layered with saffron rice and rich spices.",
-          "category": "Biriyani",
-          "quantity": 1
+          "quantity": 2
         }
       ],
-      "total": 628,
+      "subtotal": 140,
+      "tax": 7,
+      "deliverycharge": 40,
+      "total": 187,
+      "date": "8/2/2025, 3:31:51 PM",
+      "status": "Order Placed"
+    },
+    {
+      "id": 1754128982538,
+      "userId": "fc9f",
+      "items": [
+        {
+          "id": "2",
+          "img": "https://png.pngtree.com/thumb_back/fh260/background/20240328/pngtree-mutton-biryani-meal-in-a-plate-on-table-image_15645442.jpg",
+          "title": "Mutton Biriyani",
+          "price": 240,
+          "desc": "Fragrant pulav rice mixed with tender chicken, perfect for a light meal.",
+          "category": "Biriyani",
+          "quantity": 2
+        }
+      ],
+      "subtotal": 210,
+      "tax": 11,
+      "deliverycharge": 40,
+      "total": 261,
+      "date": "8/2/2025, 3:33:02 PM",
+      "status": "Order Placed"
+    },
+    {
+      "id": "e7c8",
+      "userId": "fc9f",
+      "items": [
+        {
+          "id": "2",
+          "img": "https://png.pngtree.com/thumb_back/fh260/background/20240328/pngtree-mutton-biryani-meal-in-a-plate-on-table-image_15645442.jpg",
+          "title": "Mutton Biriyani",
+          "price": 240,
+          "desc": "Fragrant pulav rice mixed with tender chicken, perfect for a light meal.",
+          "category": "Biriyani",
+          "quantity": 2
+        }
+      ],
+      "total": 534,
+      "address": "manjeri town",
       "paymentMethod": "UPI",
-      "address": "malappuram , manjeri, pulpatta, thottekkad",
-      "date": "8/1/2025, 12:27:57 PM",
-      "status": "Order Placed - UPI"
+      "status": "Pending",
+      "date": "8/2/2025, 3:39:25 PM"
     },
     {
-      "id": 1754038018962,
-      "userId": "fc9f",
-      "items": [
-        {
-          "id": "2",
-          "img": "https://png.pngtree.com/thumb_back/fh260/background/20240328/pngtree-mutton-biryani-meal-in-a-plate-on-table-image_15645442.jpg",
-          "title": "Mutton Biriyani",
-          "price": 240,
-          "desc": "Fragrant pulav rice mixed with tender chicken, perfect for a light meal.",
-          "category": "Biriyani",
-          "quantity": 1
-        },
-        {
-          "id": "5",
-          "img": "https://www.melskitchencafe.com/wp-content/uploads/2023/01/updated-lava-cakes7-500x500.jpg",
-          "title": "Chocolate Lava Cake",
-          "category": "Dessert",
-          "price": 120,
-          "desc": "Warm chocolate cake with a gooey molten center served with ice cream.",
-          "quantity": 1
-        },
-        {
-          "id": "3",
-          "img": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhoFARcCqxGEQAv-lxRL9_6QnaUOY-zIUAvCOzkUoKbNk6URYGexQZEUYoWsPfKOQ_Yl8hWGAkMK2WDtXlW2YjFAdbvYzLa0zA3p8k7MytP_d4YfQiB-gx1lKKMMwUMyhm3GdkAOBt2IDNi/s1600/Chicken+Biryani+4.jpg",
-          "title": "Chicken Dum Biryani",
-          "price": 200,
-          "desc": "Dum-cooked chicken biryani layered with saffron rice and rich spices.",
-          "category": "Biriyani",
-          "quantity": 1
-        }
-      ],
-      "subtotal": 560,
-      "tax": 28,
-      "deliverycharge": 40,
-      "total": 628,
-      "date": "8/1/2025, 2:16:58 PM",
-      "status": "Order Placed"
-    },
-    {
-      "id": 1754045877025,
+      "id": "20f0",
       "userId": "fc9f",
       "items": [],
-      "subtotal": 140,
-      "tax": 7,
-      "deliverycharge": 40,
-      "total": 187,
-      "date": "8/1/2025, 4:27:57 PM",
-      "status": "Order Placed"
-    },
-    {
-      "id": 1754045892061,
-      "userId": "fc9f",
-      "items": [],
-      "subtotal": 140,
-      "tax": 7,
-      "deliverycharge": 40,
-      "total": 187,
-      "date": "8/1/2025, 4:28:12 PM",
-      "status": "Order Placed"
-    },
-    {
-      "id": 1754046382098,
-      "userId": "fc9f",
-      "items": [],
-      "subtotal": 240,
-      "tax": 12,
-      "deliverycharge": 40,
-      "total": 292,
-      "date": "8/1/2025, 4:36:22 PM",
-      "status": "Order Placed"
-    },
-    {
-      "id": 1754046460076,
-      "userId": "fc9f",
-      "items": [
-        {
-          "id": "2",
-          "img": "https://png.pngtree.com/thumb_back/fh260/background/20240328/pngtree-mutton-biryani-meal-in-a-plate-on-table-image_15645442.jpg",
-          "title": "Mutton Biriyani",
-          "price": 240,
-          "desc": "Fragrant pulav rice mixed with tender chicken, perfect for a light meal.",
-          "category": "Biriyani",
-          "quantity": 1
-        }
-      ],
-      "subtotal": 240,
-      "tax": 12,
-      "deliverycharge": 40,
-      "total": 292,
-      "date": "8/1/2025, 4:37:40 PM",
-      "status": "Order Placed"
-    },
-    {
-      "id": 1754046466857,
-      "userId": "fc9f",
-      "items": [
-        {
-          "id": "2",
-          "img": "https://png.pngtree.com/thumb_back/fh260/background/20240328/pngtree-mutton-biryani-meal-in-a-plate-on-table-image_15645442.jpg",
-          "title": "Mutton Biriyani",
-          "price": 240,
-          "desc": "Fragrant pulav rice mixed with tender chicken, perfect for a light meal.",
-          "category": "Biriyani",
-          "quantity": 1
-        }
-      ],
-      "subtotal": 240,
-      "tax": 12,
-      "deliverycharge": 40,
-      "total": 292,
-      "date": "8/1/2025, 4:37:46 PM",
-      "status": "Order Placed"
-    },
-    {
-      "id": 1754046476401,
-      "userId": "fc9f",
-      "items": [
-        {
-          "id": "2",
-          "img": "https://png.pngtree.com/thumb_back/fh260/background/20240328/pngtree-mutton-biryani-meal-in-a-plate-on-table-image_15645442.jpg",
-          "title": "Mutton Biriyani",
-          "price": 240,
-          "desc": "Fragrant pulav rice mixed with tender chicken, perfect for a light meal.",
-          "category": "Biriyani",
-          "quantity": 1
-        }
-      ],
-      "subtotal": 140,
-      "tax": 7,
-      "deliverycharge": 40,
-      "total": 187,
-      "date": "8/1/2025, 4:37:56 PM",
-      "status": "Order Placed"
-    },
-    {
-      "id": 1754046495912,
-      "userId": "fc9f",
-      "items": [
-        {
-          "id": "2",
-          "img": "https://png.pngtree.com/thumb_back/fh260/background/20240328/pngtree-mutton-biryani-meal-in-a-plate-on-table-image_15645442.jpg",
-          "title": "Mutton Biriyani",
-          "price": 240,
-          "desc": "Fragrant pulav rice mixed with tender chicken, perfect for a light meal.",
-          "category": "Biriyani",
-          "quantity": 1
-        }
-      ],
-      "subtotal": 240,
-      "tax": 12,
-      "deliverycharge": 40,
-      "total": 292,
-      "date": "8/1/2025, 4:38:15 PM",
-      "status": "Order Placed"
-    },
-    {
-      "id": 1754046498606,
-      "userId": "fc9f",
-      "items": [
-        {
-          "id": "2",
-          "img": "https://png.pngtree.com/thumb_back/fh260/background/20240328/pngtree-mutton-biryani-meal-in-a-plate-on-table-image_15645442.jpg",
-          "title": "Mutton Biriyani",
-          "price": 240,
-          "desc": "Fragrant pulav rice mixed with tender chicken, perfect for a light meal.",
-          "category": "Biriyani",
-          "quantity": 1
-        }
-      ],
-      "total": 292,
+      "total": 30,
+      "address": "puruthanan kodan house thottekad",
       "paymentMethod": "UPI",
-      "address": "malappuram , manjeri, pulpatta, thottekkad",
-      "date": "8/1/2025, 4:38:18 PM",
-      "status": "Order Placed - UPI"
+      "status": "Pending",
+      "date": "8/2/2025, 3:43:46 PM"
+    },
+    {
+      "id": "c9ca",
+      "userId": "5a2e",
+      "items": [
+        {
+          "id": "2",
+          "img": "https://png.pngtree.com/thumb_back/fh260/background/20240328/pngtree-mutton-biryani-meal-in-a-plate-on-table-image_15645442.jpg",
+          "title": "Mutton Biriyani",
+          "price": 240,
+          "desc": "Fragrant pulav rice mixed with tender chicken, perfect for a light meal.",
+          "category": "Biriyani",
+          "quantity": 1
+        }
+      ],
+      "total": 282,
+      "address": "manjeri Town",
+      "paymentMethod": "UPI",
+      "status": "Pending",
+      "date": "8/2/2025, 4:37:38 PM"
+    },
+    {
+      "id": "3998",
+      "userId": "5a2e",
+      "items": [
+        {
+          "id": "6",
+          "img": "https://sundaytable.co/wp-content/uploads/2023/08/the-best-no-bake-strawberry-cheesecake-1.jpg",
+          "title": "Strawberry Cheesecake",
+          "category": "Dessert",
+          "price": 150,
+          "desc": "Creamy cheesecake topped with fresh strawberry compote.",
+          "quantity": 1
+        }
+      ],
+      "total": 188,
+      "address": "manjeri Town",
+      "subtotal": 150,
+      "tax": 8,
+      "deliverycharge": 30,
+      "paymentMethod": "UPI",
+      "status": "Pending",
+      "date": "8/2/2025, 5:16:35 PM"
+    },
+    {
+      "id": "c7ff",
+      "userId": "5a2e",
+      "items": [
+        {
+          "id": "2",
+          "img": "https://png.pngtree.com/thumb_back/fh260/background/20240328/pngtree-mutton-biryani-meal-in-a-plate-on-table-image_15645442.jpg",
+          "title": "Mutton Biriyani",
+          "price": 240,
+          "desc": "Fragrant pulav rice mixed with tender chicken, perfect for a light meal.",
+          "category": "Biriyani",
+          "quantity": 1
+        }
+      ],
+      "total": 282,
+      "address": "manjeri Town",
+      "subtotal": 240,
+      "tax": 12,
+      "deliverycharge": 30,
+      "paymentMethod": "ATM",
+      "status": "Order Placed",
+      "date": "8/2/2025, 5:19:01 PM"
+    },
+    {
+      "id": "346b",
+      "userId": "5a2e",
+      "items": [
+        {
+          "id": "1",
+          "img": "https://pipingpotcurry.com/wp-content/uploads/2024/04/Chicken-Biryani-Piping-Pot-Curry.jpg",
+          "title": "Authentic Chicken Biryani",
+          "price": 140,
+          "desc": "Traditional chicken biryani made with flavorful spices and long-grain basmati rice.",
+          "category": "Biriyani",
+          "quantity": 6
+        },
+        {
+          "id": "2",
+          "img": "https://png.pngtree.com/thumb_back/fh260/background/20240328/pngtree-mutton-biryani-meal-in-a-plate-on-table-image_15645442.jpg",
+          "title": "Mutton Biriyani",
+          "price": 240,
+          "desc": "Fragrant pulav rice mixed with tender chicken, perfect for a light meal.",
+          "category": "Biriyani",
+          "quantity": 13
+        }
+      ],
+      "total": 4188,
+      "address": "bridgeon thurakkal\n",
+      "subtotal": 3960,
+      "tax": 198,
+      "deliverycharge": 30,
+      "paymentMethod": "UPI",
+      "status": "Order Placed",
+      "date": "8/2/2025, 5:22:55 PM"
+    },
+    {
+      "id": "4bc5",
+      "userId": "a3bc",
+      "items": [
+        {
+          "id": "18",
+          "img": "https://cdn.uengage.io/uploads/18085/image-465619-1717587021.jpeg",
+          "title": "Spicy Paneer Burger",
+          "category": "Burger",
+          "price": 150,
+          "desc": "Paneer patty with chili mayo, onions, and crunchy slaw.",
+          "quantity": 1
+        }
+      ],
+      "total": 188,
+      "address": "pulpatta",
+      "subtotal": 150,
+      "tax": 8,
+      "deliverycharge": 30,
+      "paymentMethod": "UPI",
+      "status": "Order Placed",
+      "date": "8/3/2025, 10:01:58 AM"
     }
   ],
   "wishlist": [

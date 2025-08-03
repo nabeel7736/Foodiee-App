@@ -60,7 +60,7 @@ const [cartItems, setCartItems] = useState(() => {
       const existing = prev.find((x) => x.id === item.id);
       if (existing) {
         return prev.map((x) =>
-          x.id === item.id ? { ...x, quantity: x.quantity + 1 } : x
+          x.id === item.id && x.quantity<5 ?  { ...x, quantity: x.quantity + 1 } : x
         );
       }
       return [...prev, { ...item, quantity: 1 }];

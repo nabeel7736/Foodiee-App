@@ -6,12 +6,12 @@ import { StoreContext } from "../storecontext/storecontext";
 const ProductDetails = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-  // const location =useLocation()
+  const location =useLocation()
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const { addToCart,cartItems } = useContext(StoreContext);
 
-  // const singleProduct= location.state?.product;
+  const singleProduct= location.state?.singleProduct;
 
   // useEffect(()=>{
   //   if(singleProduct){
@@ -42,7 +42,7 @@ const ProductDetails = () => {
   //   navigate("/order", { state: { product } });
   // };
 
-//  const itemsOrder =singleProduct ? [singleProduct] : cartItems
+ const itemsOrder =singleProduct ? [singleProduct] : cartItems
 
     const isInCart = product && cartItems.some((item) => item.id === product.id);
   

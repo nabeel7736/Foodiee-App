@@ -26,9 +26,8 @@ const Cart = () => {
     const handleDecrement = (item) => {
         if (item.quantity > 1) {
             updateQuantity(item.id, item.quantity - 1);
-        } else {
-            removeFromCart(item.id);
         }
+
     };
 
     const handleCheckout = () => {
@@ -40,16 +39,16 @@ const Cart = () => {
 
             {cartItems.length === 0 ? (
                 <div className="bg-transparent relative top-40">
-                <FaCartShopping size={80} className="text-center text-yellow-500 ml-142"/>
-                <br />
-                <p className="text-center text-yellow-400 font-semibold text-3xl items-center">Your cart is empty.</p>
-                <p className="text-center text-gray-400 font-mono text-xl items-center">Please Add To Cart</p>
-                 </div>
+                    <FaCartShopping size={80} className="text-center text-yellow-500 ml-142" />
+                    <br />
+                    <p className="text-center text-yellow-400 font-semibold text-3xl items-center">Your cart is empty.</p>
+                    <p className="text-center text-gray-400 font-mono text-xl items-center">Please Add To Cart</p>
+                </div>
             ) : (
                 <div className="flex flex-col gap-4 max-w-4xl mx-auto">
-            <h1 className="text-4xl font-bold mb-2 text-center text-yellow-400 mt-15">
-                Your Cart
-            </h1>
+                    <h1 className="text-4xl font-bold mb-2 text-center text-yellow-400 mt-15">
+                        Your Cart
+                    </h1>
                     <p className="text-center mb-4 font-medium">Check your selected items, update quantities, and proceed to checkout when you're ready to eat!</p>
                     {cartItems.map((item) => (
                         <div
@@ -69,14 +68,23 @@ const Cart = () => {
                                 <div className="flex items-center mt-3 gap-3">
                                     <button
                                         onClick={() => handleDecrement(item)}
-                                        className="px-3 py-1 bg-red-600 hover:bg-red-700 rounded"
+                                        disabled={item.quantity === 1}
+                                        className={`px-3 py-1 rounded transition 
+                                         ${item.quantity === 1
+                                                ? "bg-red-400 opacity-50 cursor-not-allowed"
+                                                : "bg-red-600 hover:bg-red-700"}`}
                                     >
                                         -
                                     </button>
                                     <span className="text-lg font-medium">{item.quantity}</span>
                                     <button
                                         onClick={() => addToCart(item)}
-                                        className="px-3 py-1 bg-green-600 hover:bg-green-700 rounded"
+                                        disabled={item.quantity === 5}
+                                        className={`px-3 py-1 rounded transition
+                                            ${item.quantity === 5
+                                                ? "bg-green-400 opacity-50 cursor-not-allowed"
+                                                : "bg-green-600 hover:bg-green-700"
+                                            }`}
                                     >
                                         +
                                     </button>
@@ -116,7 +124,7 @@ const Cart = () => {
                     </button>
                 </div>
             )}
-        
+
         </div>
     );
 };

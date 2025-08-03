@@ -1,27 +1,43 @@
 import React, { useContext, useEffect, useState } from "react";
 import { StoreContext } from "../storecontext/storecontext";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Payment = () => {
-  const { user, cartItems, placeOrder, clearCart } = useContext(StoreContext);
-  const navigate = useNavigate();
+  const { user, placeOrder } = useContext(StoreContext);
   const [paymentMethod, setPaymentMethod] = useState("UPI");
   const [address, setAddress] = useState("");
+  const [orderDetails, setOrderDetails]=useState(null)
+  const navigate = useNavigate();
+  const location =useLocation()
 
   useEffect(() => {
-    if (!user || cartItems.length === 0) {
-      navigate("/order");
+    if (!user) {
+      navigate("/login")
+      return
     }
 
     const saveaddress =localStorage.getItem('deliveryAddress')
     if(saveaddress){
       setAddress(saveaddress)
     }
-  }, [user, cartItems, navigate]);
 
-  if (!user || cartItems.length === 0) return null;
+    const detailsState =location.state?.orderDetails
+    const detailsStorage =JSON.parse(localStorage.getItem("orderDetails"))
 
-  const grandTotal = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0) * 1.05 + 40;
+    if(detailsState){
+      setOrderDetails(detailsState)
+      localStorage.setItem("orderDetails",JSON.stringify(detailsState))
+    }else if(detailsStorage){
+      setOrderDetails(detailsStorage)
+    }else{
+      navigate('/order')
+    }
+  }, [user, location.state, navigate]);
+
+  if (!orderDetails) return null;
+
+  // const grandTotal = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0) * 1.05 + 40;
+  const grandTotal =orderDetails.total;
 
 
   const handlePayment = () => {
@@ -38,22 +54,24 @@ const Payment = () => {
       alert("Address must be no more than 160 characters.")
       return
     }
+    navigate("/thankyou", {replace: true})
 
     localStorage.setItem('deliveryAddress',address)
 
-    const orderDetails = {
+    const finalOrder = {
       id: new Date().getTime(),
       userId: user.id,
       items: cartItems,
       total: parseFloat(grandTotal.toFixed(2)),
+      ...orderDetails,
       paymentMethod,
       address,
       date: new Date().toLocaleString(),
       status: `Order Placed - ${paymentMethod}`,
     };
 
-    placeOrder(orderDetails);
-    navigate("/thankyou", {replace: true})
+    placeOrder(finalOrder);
+    localStorage.removeItem('orderDetails')
     // clearCart();
    
   };
@@ -102,7 +120,7 @@ const Payment = () => {
         </div>
 
         <div className="text-xl font-bold mb-4 border-t pt-4 border-gray-600">
-          <p>Grand Total: <span className="text-yellow-400">₹{grandTotal.toFixed(2)}</span></p>
+          <p>Grand Total:{" "} <span className="text-yellow-400">₹{grandTotal.toFixed(2)}</span></p>
         </div>
 
         <button

@@ -143,6 +143,8 @@ const Menu = () => {
                 src={item.img}
                 alt={item.title || "Food item"}
                 className="w-full h-40 object-cover rounded mb-2 hover:scale-105 transition duration-200"
+                loading="lazy"
+                
               />
               <h3 className="text-xl font-semibold">{item.title}</h3>
               <p className="text-yellow-400 font-bold">₹{item.price}</p>
