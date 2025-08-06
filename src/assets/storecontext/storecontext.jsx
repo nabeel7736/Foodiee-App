@@ -156,7 +156,6 @@ const [cartItems, setCartItems] = useState(() => {
     }
   }, [user, userLoaded]);
 
-
   useEffect(() => {
     if (user && userLoaded) {
       localStorage.setItem(`wishlist_${user.email}`, JSON.stringify(wishlist));

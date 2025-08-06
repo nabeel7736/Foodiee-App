@@ -9,7 +9,7 @@ const Order = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const [address, setAddress] = useState(() => localStorage.getItem("address") || "");
+  const [address, setAddress] = useState("");
   const [paymentMethod, setPaymentMethod] = useState("UPI");
   const [singleProduct, setSingleProduct] = useState(null);
   const [isPlacing, setIsPlacing] = useState(false);
@@ -19,6 +19,12 @@ const Order = () => {
       navigate("/login");
       return;
     }
+
+    const savedAddress =localStorage.getItem('deliverAddress')
+    if(savedAddress){
+      setAddress(savedAddress)
+    }
+
     if (location.state && location.state.singleProduct) {
       const productFromLocation = location.state.singleProduct;
 
@@ -41,11 +47,23 @@ const Order = () => {
   const deliverycharge =30
   const total =subtotal + tax + deliverycharge 
 
+
   const placeOrder = async () => {
     if (!address.trim()) {
       alert("Please enter your address");
       return;
     }
+
+    if(address.length <15){
+      alert("Address must be atleast 15 charcters")
+      return
+    }
+
+    if(address.length>160){
+      alert('Address must be no more than 160 characters')
+      return
+    }
+    localStorage.setItem('deliverAddress',address)
 
     const orderData = {
       userId: user.id,
@@ -70,7 +88,7 @@ const Order = () => {
         localStorage.removeItem("cart");
       }
 
-      localStorage.removeItem("address");
+      // localStorage.removeItem("address");
 
       navigate("/thankyou", {state:{orderData}, replace: true});
     } catch (err) {
@@ -92,7 +110,7 @@ const Order = () => {
             value={address}
             onChange={(e) => {
               setAddress(e.target.value);
-              localStorage.setItem("address", e.target.value);
+              localStorage.setItem("deliverAddress", e.target.value);
             }}
             className="w-full p-2 rounded bg-gray-700 text-white"
             rows={3}

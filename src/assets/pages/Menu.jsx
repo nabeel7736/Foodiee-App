@@ -34,7 +34,6 @@ const Menu = () => {
       .finally(() => setLoading(false));
   }, []);
 
-  // search, filter
   useEffect(() => {
     let result = [...menuItems];
 
@@ -135,8 +134,7 @@ const Menu = () => {
             
             <div
               key={item.id}
-              className="bg-gray-700 p-4 rounded shadow hover:shadow-lg transition"
-              // onClick={() =>  navigate(`/products/${item.id}`)}
+              className="bg-gray-700 p-4 rounded-bl-4xl rounded-tr-4xl rounded-br-xl rounded-tl-2xl shadow hover:shadow-lg transition"
             >
               
               <img
@@ -176,7 +174,6 @@ const Menu = () => {
   {wishlist.find((i) => i.id === item.id) ? <FaHeart size={30}/> : <FaHeartCirclePlus size={30}/>}
 </button>
 )}
-              
             </div>
             
           ))

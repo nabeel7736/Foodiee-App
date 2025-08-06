@@ -1,34 +1,10 @@
 {
   "menuItems": [
     {
-      "id": "1",
-      "img": "https://pipingpotcurry.com/wp-content/uploads/2024/04/Chicken-Biryani-Piping-Pot-Curry.jpg",
-      "title": "Authentic Chicken Biryani",
-      "price": 140,
-      "desc": "Traditional chicken biryani made with flavorful spices and long-grain basmati rice.",
-      "category": "Biriyani"
-    },
-    {
-      "id": "2",
-      "img": "https://png.pngtree.com/thumb_back/fh260/background/20240328/pngtree-mutton-biryani-meal-in-a-plate-on-table-image_15645442.jpg",
-      "title": "Mutton Biriyani",
-      "price": 240,
-      "desc": "Fragrant pulav rice mixed with tender chicken, perfect for a light meal.",
-      "category": "Biriyani"
-    },
-    {
-      "id": "3",
-      "img": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhoFARcCqxGEQAv-lxRL9_6QnaUOY-zIUAvCOzkUoKbNk6URYGexQZEUYoWsPfKOQ_Yl8hWGAkMK2WDtXlW2YjFAdbvYzLa0zA3p8k7MytP_d4YfQiB-gx1lKKMMwUMyhm3GdkAOBt2IDNi/s1600/Chicken+Biryani+4.jpg",
-      "title": "Chicken Dum Biryani",
-      "price": 200,
-      "desc": "Dum-cooked chicken biryani layered with saffron rice and rich spices.",
-      "category": "Biriyani"
-    },
-    {
       "id": "4",
       "img": "https://i.ytimg.com/vi/hFuG4wlztMo/maxresdefault.jpg",
       "title": "Spicy Fried Chicken Biryani",
-      "price": 210,
+      "price": 216,
       "desc": "Crispy fried chicken paired with spicy biryani rice for a bold taste experience.",
       "category": "Biriyani"
     },
@@ -37,7 +13,7 @@
       "img": "https://www.melskitchencafe.com/wp-content/uploads/2023/01/updated-lava-cakes7-500x500.jpg",
       "title": "Chocolate Lava Cake",
       "category": "Dessert",
-      "price": 120,
+      "price": 122,
       "desc": "Warm chocolate cake with a gooey molten center served with ice cream."
     },
     {
@@ -45,7 +21,7 @@
       "img": "https://sundaytable.co/wp-content/uploads/2023/08/the-best-no-bake-strawberry-cheesecake-1.jpg",
       "title": "Strawberry Cheesecake",
       "category": "Dessert",
-      "price": 150,
+      "price": 148,
       "desc": "Creamy cheesecake topped with fresh strawberry compote."
     },
     {
@@ -249,61 +225,60 @@
       "desc": "Cubes of paneer, onions, and capsicum with spicy Indian seasoning."
     },
     {
-      "id": "32",
-      "img": "https://reddotgreendot.com/cdn/shop/products/ChickenPepperoni.png?v=1678783253",
-      "title": "Pepperoni Feast Pizza",
-      "category": "Pizza",
-      "price": 240,
-      "desc": "Loaded with spicy pepperoni slices and extra cheese."
+      "id": "d39c",
+      "title": "Authentic Chicken Biriyani",
+      "category": "Biriyani",
+      "price": 130,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqz7miyCLLcl4e0aXlwpJiu4M2AA-3YIfSqlqB-M4mTFmKE5VS9WMst6PU980Kk03t8cX4",
+      "desc": "Authentic chicken biryani is a fragrant, layered rice dish with succulent pieces of chicken, cooked in a pot with aromatic spices and herbs"
     }
   ],
   "userDetails": [
-    {
-      "id": "1",
-      "email": "test@example.com",
-      "password": "123456",
-      "name": "Test User"
-    },
-    {
-      "id": "fc9f",
-      "name": "nabeel",
-      "email": "sanukuttan@gmail.com",
-      "password": "12332145",
-      "role": "user"
-    },
-    {
-      "id": "ba62",
-      "name": "ajsal",
-      "email": "ajsal12@gmail.com",
-      "password": "ajsal@34",
-      "role": "user"
-    },
     {
       "id": "3436",
       "name": "Adhil",
       "email": "adhil@gmail.com",
       "password": "123adil",
-      "role": "user"
+      "role": "user",
+      "status": "active"
     },
     {
       "id": "1e43",
       "name": "Basith",
       "email": "basith@gmail.com",
       "password": "123basith",
-      "role": "user"
+      "role": "user",
+      "status": "active"
     },
     {
       "id": "5a2e",
       "name": "naja",
       "email": "naja123@gmail.com",
       "password": "naja900",
-      "role": "user"
+      "role": "user",
+      "status": "active"
     },
     {
       "id": "a3bc",
       "name": "Fidha",
       "email": "fidhafinu@gmail.com",
       "password": "sanufinu345",
+      "role": "user",
+      "status": "active"
+    },
+    {
+      "id": "298b",
+      "name": "Nabeel",
+      "email": "mr.nabeel@gmail.com",
+      "password": "Sanu@finu",
+      "role": "admin",
+      "status": "active"
+    },
+    {
+      "id": "8785",
+      "name": "Finu",
+      "email": "finu@gmail.com",
+      "password": "Sanu@12",
       "role": "user"
     }
   ],
@@ -379,7 +354,7 @@
       "status": "Order Placed"
     },
     {
-      "id": 1754128022746,
+      "id": "1754128022746",
       "userId": "fc9f",
       "items": [],
       "subtotal": 180,
@@ -390,7 +365,7 @@
       "status": "Order Placed"
     },
     {
-      "id": 1754128271438,
+      "id": "1754128271438",
       "userId": "fc9f",
       "items": [],
       "subtotal": 240,
@@ -401,7 +376,7 @@
       "status": "Order Placed"
     },
     {
-      "id": 1754128291876,
+      "id": "1754128291876",
       "userId": "fc9f",
       "items": [
         {
@@ -422,7 +397,7 @@
       "status": "Order Placed"
     },
     {
-      "id": 1754128841652,
+      "id": "1754128841652",
       "userId": "fc9f",
       "items": [
         {
@@ -443,7 +418,7 @@
       "status": "Order Placed"
     },
     {
-      "id": 1754128877809,
+      "id": "1754128877809",
       "userId": "fc9f",
       "items": [
         {
@@ -464,7 +439,7 @@
       "status": "Order Placed"
     },
     {
-      "id": 1754128911865,
+      "id": "1754128911865",
       "userId": "fc9f",
       "items": [
         {
@@ -485,7 +460,7 @@
       "status": "Order Placed"
     },
     {
-      "id": 1754128982538,
+      "id": "1754128982538",
       "userId": "fc9f",
       "items": [
         {
@@ -503,7 +478,7 @@
       "deliverycharge": 40,
       "total": 261,
       "date": "8/2/2025, 3:33:02 PM",
-      "status": "Order Placed"
+      "status": "Delivered"
     },
     {
       "id": "e7c8",
@@ -655,6 +630,309 @@
       "paymentMethod": "UPI",
       "status": "Order Placed",
       "date": "8/3/2025, 10:01:58 AM"
+    },
+    {
+      "id": "7a30",
+      "userId": "a3bc",
+      "items": [
+        {
+          "id": "2",
+          "img": "https://png.pngtree.com/thumb_back/fh260/background/20240328/pngtree-mutton-biryani-meal-in-a-plate-on-table-image_15645442.jpg",
+          "title": "Mutton Biriyani",
+          "price": 240,
+          "desc": "Fragrant pulav rice mixed with tender chicken, perfect for a light meal.",
+          "category": "Biriyani",
+          "quantity": 1
+        }
+      ],
+      "total": 282,
+      "address": "manjeri, pulpatta, palakkathod",
+      "subtotal": 240,
+      "tax": 12,
+      "deliverycharge": 30,
+      "paymentMethod": "UPI",
+      "status": "Order Placed",
+      "date": "8/3/2025, 11:04:52 AM"
+    },
+    {
+      "id": "6f6d",
+      "userId": "a3bc",
+      "items": [
+        {
+          "id": "32",
+          "img": "https://reddotgreendot.com/cdn/shop/products/ChickenPepperoni.png?v=1678783253",
+          "title": "Pepperoni Feast Pizza",
+          "category": "Pizza",
+          "price": 240,
+          "desc": "Loaded with spicy pepperoni slices and extra cheese.",
+          "quantity": 1
+        }
+      ],
+      "total": 282,
+      "address": "manjeri, pulpatta palakkathod\n",
+      "subtotal": 240,
+      "tax": 12,
+      "deliverycharge": 30,
+      "paymentMethod": "UPI",
+      "status": "Order Placed",
+      "date": "8/3/2025, 11:09:28 AM"
+    },
+    {
+      "id": "c505",
+      "userId": "a3bc",
+      "items": [
+        {
+          "id": "32",
+          "img": "https://reddotgreendot.com/cdn/shop/products/ChickenPepperoni.png?v=1678783253",
+          "title": "Pepperoni Feast Pizza",
+          "category": "Pizza",
+          "price": 240,
+          "desc": "Loaded with spicy pepperoni slices and extra cheese.",
+          "quantity": 1
+        }
+      ],
+      "total": 282,
+      "address": "manjeri, pulpatta , palakkathod",
+      "subtotal": 240,
+      "tax": 12,
+      "deliverycharge": 30,
+      "paymentMethod": "UPI",
+      "status": "Order Placed",
+      "date": "8/3/2025, 11:10:13 AM"
+    },
+    {
+      "id": "f9ce",
+      "userId": "a3bc",
+      "items": [
+        {
+          "id": "32",
+          "img": "https://reddotgreendot.com/cdn/shop/products/ChickenPepperoni.png?v=1678783253",
+          "title": "Pepperoni Feast Pizza",
+          "category": "Pizza",
+          "price": 240,
+          "desc": "Loaded with spicy pepperoni slices and extra cheese.",
+          "quantity": 1
+        }
+      ],
+      "total": 282,
+      "address": "manjeri,pulpatta, palakkathod",
+      "subtotal": 240,
+      "tax": 12,
+      "deliverycharge": 30,
+      "paymentMethod": "UPI",
+      "status": "Order Placed",
+      "date": "8/3/2025, 11:17:22 AM"
+    },
+    {
+      "id": "c992",
+      "userId": "a3bc",
+      "items": [
+        {
+          "id": "5",
+          "img": "https://www.melskitchencafe.com/wp-content/uploads/2023/01/updated-lava-cakes7-500x500.jpg",
+          "title": "Chocolate Lava Cake",
+          "category": "Dessert",
+          "price": 120,
+          "desc": "Warm chocolate cake with a gooey molten center served with ice cream.",
+          "quantity": 1
+        }
+      ],
+      "total": 156,
+      "address": "manjeri, pulpatta ,palakkathod",
+      "subtotal": 120,
+      "tax": 6,
+      "deliverycharge": 30,
+      "paymentMethod": "UPI",
+      "status": "Order Placed",
+      "date": "8/3/2025, 11:19:27 AM"
+    },
+    {
+      "id": "215d",
+      "userId": "d940",
+      "items": [
+        {
+          "id": "1",
+          "img": "https://pipingpotcurry.com/wp-content/uploads/2024/04/Chicken-Biryani-Piping-Pot-Curry.jpg",
+          "title": "Authentic Chicken Biryani",
+          "price": 140,
+          "desc": "Traditional chicken biryani made with flavorful spices and long-grain basmati rice.",
+          "category": "Biriyani",
+          "quantity": 3
+        },
+        {
+          "id": "5",
+          "img": "https://www.melskitchencafe.com/wp-content/uploads/2023/01/updated-lava-cakes7-500x500.jpg",
+          "title": "Chocolate Lava Cake",
+          "category": "Dessert",
+          "price": 120,
+          "desc": "Warm chocolate cake with a gooey molten center served with ice cream.",
+          "quantity": 2
+        }
+      ],
+      "total": 723,
+      "address": "manjeri, pulpatta ,palakkathod",
+      "subtotal": 660,
+      "tax": 33,
+      "deliverycharge": 30,
+      "paymentMethod": "UPI",
+      "status": "Order Placed",
+      "date": "8/3/2025, 8:46:29 PM"
+    },
+    {
+      "id": "4101",
+      "userId": "5a2e",
+      "items": [
+        {
+          "id": "2",
+          "img": "https://png.pngtree.com/thumb_back/fh260/background/20240328/pngtree-mutton-biryani-meal-in-a-plate-on-table-image_15645442.jpg",
+          "title": "Mutton Biriyani",
+          "price": 240,
+          "desc": "Fragrant pulav rice mixed with tender chicken, perfect for a light meal.",
+          "category": "Biriyani",
+          "quantity": 1
+        }
+      ],
+      "total": 282,
+      "address": "fvnifrbvuivbrbre",
+      "subtotal": 240,
+      "tax": 12,
+      "deliverycharge": 30,
+      "paymentMethod": "UPI",
+      "status": "Order Placed",
+      "date": "8/5/2025, 11:17:45 AM"
+    },
+    {
+      "id": "201c",
+      "userId": "5a2e",
+      "items": [
+        {
+          "id": "11",
+          "img": "https://theindianclaypot.com/content/images/wp-content/uploads/2018/09/schezwan-chicken-noodles.jpg",
+          "title": "Chicken Schezwan Noodles",
+          "category": "Noodles",
+          "price": 160,
+          "desc": "Spicy noodles tossed with shredded chicken and Schezwan sauce.",
+          "quantity": 5
+        }
+      ],
+      "total": 870,
+      "address": "fvnifrbvuivbrbre",
+      "subtotal": 800,
+      "tax": 40,
+      "deliverycharge": 30,
+      "paymentMethod": "UPI",
+      "status": "Order Placed",
+      "date": "8/5/2025, 11:18:00 AM"
+    },
+    {
+      "id": "c14a",
+      "userId": "2a82",
+      "items": [
+        {
+          "id": "1",
+          "img": "https://pipingpotcurry.com/wp-content/uploads/2024/04/Chicken-Biryani-Piping-Pot-Curry.jpg",
+          "title": "Authentic Chicken Biryani",
+          "price": 140,
+          "desc": "Traditional chicken biryani made with flavorful spices and long-grain basmati rice.",
+          "category": "Biriyani",
+          "quantity": 5
+        },
+        {
+          "id": "13",
+          "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyaVtRDttE-YYe3YQLvHCePs512wvK3LdVjg&s",
+          "title": "Paneer Chilli Garlic Noodles",
+          "category": "Noodles",
+          "price": 150,
+          "desc": "Garlicky noodles tossed with paneer cubes and chili sauce.",
+          "quantity": 2
+        },
+        {
+          "id": "19",
+          "img": "https://theheirloompantry.co/wp-content/uploads/2022/07/fried-egg-burger-the-heirloom-pantry-2.jpg",
+          "title": "Egg and Cheese Burger",
+          "category": "Burger",
+          "price": 140,
+          "desc": "Fried egg, cheddar cheese, and tomato sauce in a toasted bun.",
+          "quantity": 1
+        }
+      ],
+      "total": 1227,
+      "address": "fvnifrbvuivbrbre",
+      "subtotal": 1140,
+      "tax": 57,
+      "deliverycharge": 30,
+      "paymentMethod": "UPI",
+      "status": "Order Placed",
+      "date": "8/5/2025, 4:58:25 PM"
+    },
+    {
+      "id": "7143",
+      "userId": "2a82",
+      "items": [
+        {
+          "id": "2",
+          "img": "https://png.pngtree.com/thumb_back/fh260/background/20240328/pngtree-mutton-biryani-meal-in-a-plate-on-table-image_15645442.jpg",
+          "title": "Mutton Biriyani",
+          "price": 240,
+          "desc": "Fragrant pulav rice mixed with tender chicken, perfect for a light meal.",
+          "category": "Biriyani",
+          "quantity": 1
+        }
+      ],
+      "total": 282,
+      "address": "fvnifrbvuivbrbre",
+      "subtotal": 240,
+      "tax": 12,
+      "deliverycharge": 30,
+      "paymentMethod": "UPI",
+      "status": "Order Placed",
+      "date": "8/5/2025, 4:59:18 PM"
+    },
+    {
+      "id": "240a",
+      "userId": "5a2e",
+      "items": [
+        {
+          "id": "5",
+          "img": "https://www.melskitchencafe.com/wp-content/uploads/2023/01/updated-lava-cakes7-500x500.jpg",
+          "title": "Chocolate Lava Cake",
+          "category": "Dessert",
+          "price": 121,
+          "desc": "Warm chocolate cake with a gooey molten center served with ice cream.",
+          "quantity": 5
+        }
+      ],
+      "total": 665,
+      "address": "kavanur, palakkaparamb",
+      "subtotal": 605,
+      "tax": 30,
+      "deliverycharge": 30,
+      "paymentMethod": "UPI",
+      "status": "Order Placed",
+      "date": "8/6/2025, 3:17:42 PM"
+    },
+    {
+      "id": "b31c",
+      "userId": "8785",
+      "items": [
+        {
+          "id": "5",
+          "img": "https://www.melskitchencafe.com/wp-content/uploads/2023/01/updated-lava-cakes7-500x500.jpg",
+          "title": "Chocolate Lava Cake",
+          "category": "Dessert",
+          "price": 121,
+          "desc": "Warm chocolate cake with a gooey molten center served with ice cream.",
+          "quantity": 2
+        }
+      ],
+      "total": 284,
+      "address": "Pulpatta Palakkathod",
+      "subtotal": 242,
+      "tax": 12,
+      "deliverycharge": 30,
+      "paymentMethod": "UPI",
+      "status": "Order Placed",
+      "date": "8/6/2025, 4:31:07 PM"
     }
   ],
   "wishlist": [

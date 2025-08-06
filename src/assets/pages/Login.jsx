@@ -3,35 +3,59 @@
 import React, { useContext, useEffect, useState } from "react";
 import { StoreContext } from "../storecontext/storecontext";
 import { useNavigate, Link } from "react-router-dom";
+import axios from "axios";
 
 const Login = () => {
-  const { loginUser,user } = useContext(StoreContext);
+  const { setUser } = useContext(StoreContext);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
-  const navigate = useNavigate();
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    const storedUser = localStorage.getItem("user");
+    if (storedUser) {
+      const parsedUser = JSON.parse(storedUser);
+      if (parsedUser.role === "admin") {
+        navigate("/admin/dashboard");
+      } else {
+        navigate("/");
+      }
+    }
+  }, [navigate]);
 
   const handleLogin = async (e) => {
     e.preventDefault();
 
-    if(!email || !password){
+    try{
+      const res =await axios.get("http://localhost:3002/userDetails")
+      const foundUser =res.data.find(
+        (u) => u.email ===email && u.password ===password
+      )
+      
+      if(!email || !password){
         setError("Please enter both email and password");
         return ;
-    }
+      }
+      
+      if (!foundUser) {
+        setError("Invalid email or password.");
+      }else{
+        setUser(foundUser)
+        localStorage.setItem("user", JSON.stringify(foundUser))
 
-    const success = await loginUser(email, password);
-
-    if (!success) {
-      setError("Invalid email or password.");
+        if(foundUser.role ==="admin"){
+          navigate('/admin/dashboard')
+        }else{
+          navigate('/')
+        }
+      }
+    }catch(err){
+      console.log('Login Error:',err)
     }
-  };
-
-  useEffect(()=>{
-    if(user){
-      navigate('/');
-    }
-  },[user]);
+    
+  }
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-gray-600 to-gray-800">

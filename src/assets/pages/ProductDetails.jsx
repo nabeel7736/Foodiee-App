@@ -11,7 +11,7 @@ const ProductDetails = () => {
   const [loading, setLoading] = useState(true);
   const { addToCart,cartItems } = useContext(StoreContext);
 
-  const singleProduct= location.state?.singleProduct;
+  const singleProduct= location.state?.singleProduct; 
 
   // useEffect(()=>{
   //   if(singleProduct){

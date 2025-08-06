@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { FaCartShopping } from "react-icons/fa6";
 
 const Cart = () => {
-    const { user, cartItems, addToCart, updateQuantity, removeFromCart, clearCart } =
+    const { user, cartItems, addToCart, updateQuantity, removeFromCart } =
         useContext(StoreContext);
 
     const navigate = useNavigate();

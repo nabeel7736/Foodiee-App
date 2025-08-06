@@ -8,6 +8,10 @@ const ProtectedRoute =({children})=>{
     if(!user){
         return <Navigate to='/login' replace />
     }
+
+    if(user.role === "admin"){
+        return <Navigate to='/admin' replace/>
+    }
     return children;
 }
 export default ProtectedRoute

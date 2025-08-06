@@ -9,6 +9,7 @@ const Register = () => {
     name: "",
     email: "",
     password: "",
+    role: "user",
   });
 
   const [error, setError] = useState("");
@@ -27,7 +28,7 @@ const Register = () => {
   const handleRegister = async (e) => {
     e.preventDefault();
 
-    const {name, email, password} =userData;
+    const {name, email, password, role} =userData;
 
     if(!name || !email || !password){
         setError("All fields are required");
@@ -49,7 +50,21 @@ const Register = () => {
         return;
     }
 
-    const success = await registerUser({ ...userData, role: "user" });
+    
+const uppercase = /[A-Z]/
+const symbol = /[!@#$%^&*(),.?":{}|<>]/
+
+if (!uppercase.test(password)) {
+  setError("Password must include at least one uppercase letter");
+  return;
+}
+
+if (!symbol.test(password)) {
+  setError("Password must include at least one special symbol");
+  return;
+}
+
+    const success = await registerUser(userData);
 
     if (success) {
       navigate("/login");
@@ -94,6 +109,20 @@ const Register = () => {
             onChange={handleChange}
             className="w-full border p-2 rounded text-white"
           />
+          <div className="text-white space-x-4">
+            <label>
+              <input type="radio" name="role" value="user"
+              checked={userData.role === "user"}
+              onChange={handleChange} />{" "}User
+            </label>
+            <label>
+              <input type="radio"
+              name="role"
+              value="admin"
+              checked={userData.role ==='admin'}
+              onChange={handleChange} />{" "}Admin
+            </label>
+          </div>
 
           <button
             type="submit"
